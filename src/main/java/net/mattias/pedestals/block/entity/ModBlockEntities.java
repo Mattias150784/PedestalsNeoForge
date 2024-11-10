@@ -99,6 +99,10 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("stone_bricks_pedestal_be", () -> BlockEntityType.Builder.of(
                     StonebricksPedestalBlockEntity::new, ModBlocks.STONE_BRICKS_PEDESTAL.get()).build(null));
 
+    public static final Supplier<BlockEntityType<BambooPlanksPedestalBlockEntity>> BAMBOO_PLANKS_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("bamboo_planks_pedestal_be", () -> BlockEntityType.Builder.of(
+                    BambooPlanksPedestalBlockEntity::new, ModBlocks.BAMBOO_PLANKS_PEDESTAL.get()).build(null));
+
 
 
     public static void register(IEventBus eventBus) {

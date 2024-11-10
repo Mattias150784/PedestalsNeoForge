@@ -87,6 +87,7 @@ public class Pedestals
             event.registerBlockEntityRenderer(ModBlockEntities.ACACIA_PLANKS_PEDESTAL_BE.get(), AcaciaPlanksPedestalBlockEntityRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntities.CHERRY_PLANKS_PEDESTAL_BE.get(), CherryPlanksPedestalBlockEntityRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntities.MANGROVE_PLANKS_PEDESTAL_BE.get(), MangrovePlanksPedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.BAMBOO_PLANKS_PEDESTAL_BE.get(), BambooPlanksPedestalBlockEntityRenderer::new);
 
             event.registerBlockEntityRenderer(ModBlockEntities.COBBLESTONE_PEDESTAL_BE.get(), CobblestonePedestalBlockEntityRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntities.STONE_BRICKS_PEDESTAL_BE.get(), StonebricksPedestalBlockEntityRenderer::new);
@@ -114,6 +115,7 @@ public class Pedestals
             event.register(ModMenuTypes.ACACIA_PLANKS_PEDESTAL_MENU.get(), AcaciaPlanksPedestalScreen::new);
             event.register(ModMenuTypes.CHERRY_PLANKS_PEDESTAL_MENU.get(), CherryPlanksPedestalScreen::new);
             event.register(ModMenuTypes.MANGROVE_PLANKS_PEDESTAL_MENU.get(), MangrovePlanksPedestalScreen::new);
+            event.register(ModMenuTypes.BAMBOO_PLANKS_PEDESTAL_MENU.get(), BambooPlanksPedestalScreen::new);
 
             event.register(ModMenuTypes.COBBLESTONE_PEDESTAL_MENU.get(), CobblestonePedestalScreen::new);
             event.register(ModMenuTypes.STONE_PEDESTAL_MENU.get(), StonePedestalScreen::new);

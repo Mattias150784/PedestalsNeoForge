@@ -72,6 +72,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> CHERRY_PLANKS_PEDESTAL = registerBlock("cherry_planks_pedestal",
             () -> new CherryPlanksPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS)));
 
+    public static final DeferredBlock<Block> BAMBOO_PLANKS_PEDESTAL = registerBlock("bamboo_planks_pedestal",
+            () -> new BambooPlanksPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS)));
+
     public static final DeferredBlock<Block> COBBLESTONE_PEDESTAL = registerBlock("cobblestone_pedestal",
             () -> new CobblestonePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
 

@@ -78,6 +78,9 @@ public class ModMenuTypes {
     public static final DeferredHolder<MenuType<?>, MenuType<StonebricksPedestalMenu>> STONE_BRICKS_PEDESTAL_MENU =
             registerMenuType("stone_bricks_pedestal_menu", StonebricksPedestalMenu::new);
 
+    public static final DeferredHolder<MenuType<?>, MenuType<BambooPlanksPedestalMenu>> BAMBOO_PLANKS_PEDESTAL_MENU =
+            registerMenuType("bamboo_planks_pedestal_menu", BambooPlanksPedestalMenu::new);
+
 
     private static <T extends AbstractContainerMenu>DeferredHolder<MenuType<?>, MenuType<T>> registerMenuType(String name,
                                                                                                               IContainerFactory<T> factory) {
