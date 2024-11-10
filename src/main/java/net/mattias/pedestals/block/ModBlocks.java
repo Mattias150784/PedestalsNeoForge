@@ -87,6 +87,29 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SMOOTH_STONE_PEDESTAL = registerBlock("smooth_stone_pedestal",
             () -> new SmoothstonePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
 
+    public static final DeferredBlock<Block> POLISHED_GRANITE_PEDESTAL = registerBlock("polished_granite_pedestal",
+            () -> new PolishedGranitePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_GRANITE)));
+
+    public static final DeferredBlock<Block> POLISHED_DIORITE_PEDESTAL = registerBlock("polished_diorite_pedestal",
+            () -> new PolishedDioritePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_DIORITE)));
+
+    public static final DeferredBlock<Block> POLISHED_ANDESITE_PEDESTAL = registerBlock("polished_andesite_pedestal",
+            () -> new PolishedAndesitePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_ANDESITE)));
+
+    public static final DeferredBlock<Block> GRANITE_PEDESTAL = registerBlock("granite_pedestal",
+            () -> new GranitePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
+
+    public static final DeferredBlock<Block> DIORITE_PEDESTAL = registerBlock("diorite_pedestal",
+            () -> new DioritePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
+
+    public static final DeferredBlock<Block> ANDESITE_PEDESTAL = registerBlock("andesite_pedestal",
+            () -> new AndesitePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
+
+    public static final DeferredBlock<Block> POLISHED_TUFF_PEDESTAL = registerBlock("polished_tuff_pedestal",
+            () -> new PolishedTuffPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_TUFF)));
+
+    public static final DeferredBlock<Block> POLISHED_DEEPSLATE_PEDESTAL = registerBlock("polished_deepslate_pedestal",
+            () -> new PolishedDeepslatePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_DEEPSLATE)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

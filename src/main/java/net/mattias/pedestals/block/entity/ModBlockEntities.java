@@ -103,6 +103,39 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("bamboo_planks_pedestal_be", () -> BlockEntityType.Builder.of(
                     BambooPlanksPedestalBlockEntity::new, ModBlocks.BAMBOO_PLANKS_PEDESTAL.get()).build(null));
 
+    public static final Supplier<BlockEntityType<PolishedAndesitePedestalBlockEntity>> POLISHED_ANDESITE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("polished_andesite_pedestal", () -> BlockEntityType.Builder.of(
+                    PolishedAndesitePedestalBlockEntity::new, ModBlocks.POLISHED_ANDESITE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<PolishedDioritePedestalBlockEntity>> POLISHED_DIORITE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("polished_diorite_pedestal", () -> BlockEntityType.Builder.of(
+                    PolishedDioritePedestalBlockEntity::new, ModBlocks.POLISHED_DIORITE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<PolishedGranitePedestalBlockEntity>> POLISHED_GRANITE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("polished_granite_pedestal", () -> BlockEntityType.Builder.of(
+                    PolishedGranitePedestalBlockEntity::new, ModBlocks.POLISHED_GRANITE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<PolishedTuffPedestalBlockEntity>> POLISHED_TUFF_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("polished_tuff_pedestal", () -> BlockEntityType.Builder.of(
+                    PolishedTuffPedestalBlockEntity::new, ModBlocks.POLISHED_TUFF_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<PolishedDeepslatePedestalBlockEntity>> POLISHED_DEEPSLATE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("polished_deepslate_pedestal", () -> BlockEntityType.Builder.of(
+                    PolishedDeepslatePedestalBlockEntity::new, ModBlocks.POLISHED_DEEPSLATE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<AndesitePedestalBlockEntity>> ANDESITE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("andesite_pedestal", () -> BlockEntityType.Builder.of(
+                    AndesitePedestalBlockEntity::new, ModBlocks.ANDESITE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<DioritePedestalBlockEntity>> DIORITE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("diorite_pedestal", () -> BlockEntityType.Builder.of(
+                    DioritePedestalBlockEntity::new, ModBlocks.DIORITE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<GranitePedestalBlockEntity>> GRANITE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("granite_pedestal", () -> BlockEntityType.Builder.of(
+                    GranitePedestalBlockEntity::new, ModBlocks.GRANITE_PEDESTAL.get()).build(null));
+
+
 
 
     public static void register(IEventBus eventBus) {

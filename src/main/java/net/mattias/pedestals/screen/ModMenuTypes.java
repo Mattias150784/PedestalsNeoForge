@@ -81,6 +81,32 @@ public class ModMenuTypes {
     public static final DeferredHolder<MenuType<?>, MenuType<BambooPlanksPedestalMenu>> BAMBOO_PLANKS_PEDESTAL_MENU =
             registerMenuType("bamboo_planks_pedestal_menu", BambooPlanksPedestalMenu::new);
 
+    public static final DeferredHolder<MenuType<?>, MenuType<PolishedAndesitePedestalMenu>> POLISHED_ANDESITE_PEDESTAL_MENU =
+            registerMenuType("polished_andesite_pedestal_menu", PolishedAndesitePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<PolishedDioritePedestalMenu>> POLISHED_DIORITE_PEDESTAL_MENU =
+            registerMenuType("polished_diorite_pedestal_menu", PolishedDioritePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<PolishedGranitePedestalMenu>> POLISHED_GRANITE_PEDESTAL_MENU =
+            registerMenuType("polished_granite_pedestal_menu", PolishedGranitePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<PolishedTuffPedestalMenu>> POLISHED_TUFF_PEDESTAL_MENU =
+            registerMenuType("polished_tuff_pedestal_menu", PolishedTuffPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<PolishedDeepslatePedestalMenu>> POLISHED_DEEPSLATE_PEDESTAL_MENU =
+            registerMenuType("polished_deepslate_pedestal_menu", PolishedDeepslatePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<AndesitePedestalMenu>> ANDESITE_PEDESTAL_MENU =
+            registerMenuType("andesite_pedestal_menu", AndesitePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<DioritePedestalMenu>> DIORITE_PEDESTAL_MENU =
+            registerMenuType("diorite_pedestal_menu", DioritePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<GranitePedestalMenu>> GRANITE_PEDESTAL_MENU =
+            registerMenuType("granite_pedestal_menu", GranitePedestalMenu::new);
+    
+    
+
 
     private static <T extends AbstractContainerMenu>DeferredHolder<MenuType<?>, MenuType<T>> registerMenuType(String name,
                                                                                                               IContainerFactory<T> factory) {
