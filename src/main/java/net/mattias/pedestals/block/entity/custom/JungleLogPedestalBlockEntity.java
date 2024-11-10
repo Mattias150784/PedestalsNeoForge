@@ -1,16 +1,17 @@
 package net.mattias.pedestals.block.entity.custom;
 
 import net.mattias.pedestals.block.entity.ModBlockEntities;
-import net.mattias.pedestals.screen.custom.PedestalMenu;
+import net.mattias.pedestals.screen.custom.JungleLogPedestalMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
-import net.minecraft.world.*;
+import net.minecraft.world.Containers;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -20,7 +21,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import org.jetbrains.annotations.Nullable;
 
-public class PedestalBlockEntity extends BlockEntity implements MenuProvider {
+public class JungleLogPedestalBlockEntity extends BlockEntity implements MenuProvider {
     public final ItemStackHandler inventory = new ItemStackHandler(1) {
         @Override
         protected int getStackLimit(int slot, ItemStack stack) {
@@ -37,8 +38,8 @@ public class PedestalBlockEntity extends BlockEntity implements MenuProvider {
     };
     private float rotation;
 
-    public PedestalBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(ModBlockEntities.PEDESTAL_BE.get(), pPos, pBlockState);
+    public JungleLogPedestalBlockEntity(BlockPos pPos, BlockState pBlockState) {
+        super(ModBlockEntities.JUNGLE_LOG_PEDESTAL_BE.get(), pPos, pBlockState);
     }
 
     public void clearContents() {
@@ -82,7 +83,7 @@ public class PedestalBlockEntity extends BlockEntity implements MenuProvider {
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
-        return new PedestalMenu(pContainerId, pPlayerInventory, this);
+        return new JungleLogPedestalMenu(pContainerId, pPlayerInventory, this);
     }
 
     @Nullable

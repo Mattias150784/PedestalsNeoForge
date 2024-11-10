@@ -1,7 +1,7 @@
 package net.mattias.pedestals.screen;
 
 import net.mattias.pedestals.Pedestals;
-import net.mattias.pedestals.screen.custom.PedestalMenu;
+import net.mattias.pedestals.screen.custom.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
@@ -17,6 +17,30 @@ public class ModMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<PedestalMenu>> PEDESTAL_MENU =
             registerMenuType("pedestal_menu", PedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<OakLogPedestalMenu>> OAK_LOG_PEDESTAL_MENU =
+            registerMenuType("oak_log_pedestal_menu", OakLogPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<BirchLogPedestalMenu>> BIRCH_LOG_PEDESTAL_MENU =
+            registerMenuType("birch_log_pedestal_menu", BirchLogPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<DarkOakLogPedestalMenu>> DARK_OAK_LOG_PEDESTAL_MENU =
+            registerMenuType("dark_oak_log_pedestal_menu", DarkOakLogPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<SpruceLogPedestalMenu>> SPRUCE_LOG_PEDESTAL_MENU =
+            registerMenuType("spruce_log_pedestal_menu", SpruceLogPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<AcaciaLogPedestalMenu>> ACACIA_LOG_PEDESTAL_MENU =
+            registerMenuType("acacia_log_pedestal_menu", AcaciaLogPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<JungleLogPedestalMenu>> JUNGLE_LOG_PEDESTAL_MENU =
+            registerMenuType("jungle_log_pedestal_menu", JungleLogPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<MangroveLogPedestalMenu>> MANGROVE_LOG_PEDESTAL_MENU =
+            registerMenuType("mangrove_log_pedestal_menu", MangroveLogPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<CherryLogPedestalMenu>> CHERRY_LOG_PEDESTAL_MENU =
+            registerMenuType("cherry_log_pedestal_menu", CherryLogPedestalMenu::new);
 
     private static <T extends AbstractContainerMenu>DeferredHolder<MenuType<?>, MenuType<T>> registerMenuType(String name,
                                                                                                               IContainerFactory<T> factory) {
