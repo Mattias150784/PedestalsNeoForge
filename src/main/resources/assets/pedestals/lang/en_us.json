@@ -23,6 +23,8 @@
 
  "block.pedestals.cobblestone_pedestal": "Cobblestone Pedestal",
  "block.pedestals.stone_pedestal": "Stone Pedestal",
+ "block.pedestals.stone_bricks_pedestal": "Stone Bricks Pedestal",
+ "block.pedestals.smooth_stone_pedestal": "Smooth Stone Pedestal",
 
 
   "itemGroup.pedestals.pedestals_tab": "Pedestals"

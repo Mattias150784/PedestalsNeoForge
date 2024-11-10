@@ -41,6 +41,11 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.JUNGLE_PLANKS_PEDESTAL.get());
                         pOutput.accept(ModBlocks.MANGROVE_PLANKS_PEDESTAL.get());
                         pOutput.accept(ModBlocks.CHERRY_PLANKS_PEDESTAL.get());
+
+                        pOutput.accept(ModBlocks.COBBLESTONE_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.STONE_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.STONE_BRICKS_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.SMOOTH_STONE_PEDESTAL.get());
                     }).build());
 
 

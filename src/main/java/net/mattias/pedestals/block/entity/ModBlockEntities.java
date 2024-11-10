@@ -2,6 +2,7 @@ package net.mattias.pedestals.block.entity;
 
 import net.mattias.pedestals.Pedestals;
 import net.mattias.pedestals.block.ModBlocks;
+import net.mattias.pedestals.block.custom.SmoothstonePedestalBlock;
 import net.mattias.pedestals.block.entity.custom.*;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -81,6 +82,22 @@ public class ModBlockEntities {
     public static final Supplier<BlockEntityType<MangrovePlanksPedestalBlockEntity>> MANGROVE_PLANKS_PEDESTAL_BE =
             BLOCK_ENTITIES.register("mangrove_planks_pedestal_be", () -> BlockEntityType.Builder.of(
                     MangrovePlanksPedestalBlockEntity::new, ModBlocks.MANGROVE_PLANKS_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<CobblestonePedestalBlockEntity>> COBBLESTONE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("cobble_pedestal_be", () -> BlockEntityType.Builder.of(
+                    CobblestonePedestalBlockEntity::new, ModBlocks.COBBLESTONE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<StonePedestalBlockEntity>> STONE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("stone_pedestal_be", () -> BlockEntityType.Builder.of(
+                    StonePedestalBlockEntity::new, ModBlocks.STONE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<SmoothstonePedestalBlockEntity>> SMOOTH_STONE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("smooth_stone_pedestal_be", () -> BlockEntityType.Builder.of(
+                    SmoothstonePedestalBlockEntity::new, ModBlocks.SMOOTH_STONE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<StonebricksPedestalBlockEntity>> STONE_BRICKS_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("stone_bricks_pedestal_be", () -> BlockEntityType.Builder.of(
+                    StonebricksPedestalBlockEntity::new, ModBlocks.STONE_BRICKS_PEDESTAL.get()).build(null));
 
 
 

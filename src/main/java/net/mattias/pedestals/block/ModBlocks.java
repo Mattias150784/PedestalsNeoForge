@@ -72,6 +72,18 @@ public class ModBlocks {
     public static final DeferredBlock<Block> CHERRY_PLANKS_PEDESTAL = registerBlock("cherry_planks_pedestal",
             () -> new CherryPlanksPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS)));
 
+    public static final DeferredBlock<Block> COBBLESTONE_PEDESTAL = registerBlock("cobblestone_pedestal",
+            () -> new CobblestonePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
+
+    public static final DeferredBlock<Block> STONE_PEDESTAL = registerBlock("stone_pedestal",
+            () -> new StonePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
+
+    public static final DeferredBlock<Block> STONE_BRICKS_PEDESTAL = registerBlock("stone_bricks_pedestal",
+            () -> new StonebricksPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS)));
+
+    public static final DeferredBlock<Block> SMOOTH_STONE_PEDESTAL = registerBlock("smooth_stone_pedestal",
+            () -> new SmoothstonePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
+
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
