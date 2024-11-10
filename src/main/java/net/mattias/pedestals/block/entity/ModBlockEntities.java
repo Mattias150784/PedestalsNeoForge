@@ -50,6 +50,38 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("mangrove_log_pedestal_be", () -> BlockEntityType.Builder.of(
                     MangroveLogPedestalBlockEntity::new, ModBlocks.MANGROVE_LOG_PEDESTAL.get()).build(null));
 
+    public static final Supplier<BlockEntityType<OakPlanksPedestalBlockEntity>> OAK_PLANKS_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("oak_planks_pedestal_be", () -> BlockEntityType.Builder.of(
+                    OakPlanksPedestalBlockEntity::new, ModBlocks.OAK_PLANKS_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<BirchPlanksPedestalBlockEntity>> BIRCH_PLANKS_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("birch_planks_pedestal_be", () -> BlockEntityType.Builder.of(
+                    BirchPlanksPedestalBlockEntity::new, ModBlocks.BIRCH_PLANKS_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<DarkOakPlanksPedestalBlockEntity>> DARK_OAK_PLANKS_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("dark_oak_planks_pedestal_be", () -> BlockEntityType.Builder.of(
+                    DarkOakPlanksPedestalBlockEntity::new, ModBlocks.DARK_OAK_PLANKS_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<SprucePlanksPedestalBlockEntity>> SPRUCE_PLANKS_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("spruce_planks_pedestal_be", () -> BlockEntityType.Builder.of(
+                    SprucePlanksPedestalBlockEntity::new, ModBlocks.SPRUCE_PLANKS_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<AcaciaPlanksPedestalBlockEntity>> ACACIA_PLANKS_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("acacia_planks_pedestal_be", () -> BlockEntityType.Builder.of(
+                    AcaciaPlanksPedestalBlockEntity::new, ModBlocks.ACACIA_PLANKS_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<JunglePlanksPedestalBlockEntity>> JUNGLE_PLANKS_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("jungle_planks_pedestal_be", () -> BlockEntityType.Builder.of(
+                    JunglePlanksPedestalBlockEntity::new, ModBlocks.JUNGLE_PLANKS_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<CherryPlanksPedestalBlockEntity>> CHERRY_PLANKS_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("cherry_planks_pedestal_be", () -> BlockEntityType.Builder.of(
+                    CherryPlanksPedestalBlockEntity::new, ModBlocks.CHERRY_PLANKS_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<MangrovePlanksPedestalBlockEntity>> MANGROVE_PLANKS_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("mangrove_planks_pedestal_be", () -> BlockEntityType.Builder.of(
+                    MangrovePlanksPedestalBlockEntity::new, ModBlocks.MANGROVE_PLANKS_PEDESTAL.get()).build(null));
+
 
 
     public static void register(IEventBus eventBus) {

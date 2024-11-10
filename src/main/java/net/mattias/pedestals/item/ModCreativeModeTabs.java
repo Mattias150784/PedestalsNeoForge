@@ -32,6 +32,15 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.JUNGLE_LOG_PEDESTAL.get());
                         pOutput.accept(ModBlocks.MANGROVE_LOG_PEDESTAL.get());
                         pOutput.accept(ModBlocks.CHERRY_LOG_PEDESTAL.get());
+
+                        pOutput.accept(ModBlocks.OAK_PLANKS_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.BIRCH_PLANKS_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.DARK_OAK_PLANKS_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.SPRUCE_PLANKS_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.ACACIA_PLANKS_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.JUNGLE_PLANKS_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.MANGROVE_PLANKS_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.CHERRY_PLANKS_PEDESTAL.get());
                     }).build());
 
 

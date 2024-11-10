@@ -42,6 +42,31 @@ public class ModMenuTypes {
     public static final DeferredHolder<MenuType<?>, MenuType<CherryLogPedestalMenu>> CHERRY_LOG_PEDESTAL_MENU =
             registerMenuType("cherry_log_pedestal_menu", CherryLogPedestalMenu::new);
 
+    public static final DeferredHolder<MenuType<?>, MenuType<OakPlanksPedestalMenu>> OAK_PLANKS_PEDESTAL_MENU =
+            registerMenuType("oak_planks_pedestal_menu", OakPlanksPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<BirchPlanksPedestalMenu>> BIRCH_PLANKS_PEDESTAL_MENU =
+            registerMenuType("birch_planks_pedestal_menu", BirchPlanksPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<DarkOakPlanksPedestalMenu>> DARK_OAK_PLANKS_PEDESTAL_MENU =
+            registerMenuType("dark_oak_planks_pedestal_menu", DarkOakPlanksPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<SprucePlanksPedestalMenu>> SPRUCE_PLANKS_PEDESTAL_MENU =
+            registerMenuType("spruce_planks_pedestal_menu", SprucePlanksPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<AcaciaPlanksPedestalMenu>> ACACIA_PLANKS_PEDESTAL_MENU =
+            registerMenuType("acacia_planks_pedestal_menu", AcaciaPlanksPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<JunglePlanksPedestalMenu>> JUNGLE_PLANKS_PEDESTAL_MENU =
+            registerMenuType("jungle_planks_pedestal_menu", JunglePlanksPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<MangrovePlanksPedestalMenu>> MANGROVE_PLANKS_PEDESTAL_MENU =
+            registerMenuType("mangrove_planks_pedestal_menu", MangrovePlanksPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<CherryPlanksPedestalMenu>> CHERRY_PLANKS_PEDESTAL_MENU =
+            registerMenuType("cherry_planks_pedestal_menu", CherryPlanksPedestalMenu::new);
+
+
     private static <T extends AbstractContainerMenu>DeferredHolder<MenuType<?>, MenuType<T>> registerMenuType(String name,
                                                                                                               IContainerFactory<T> factory) {
         return MENUS.register(name, () -> IMenuTypeExtension.create(factory));

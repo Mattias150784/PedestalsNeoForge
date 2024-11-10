@@ -48,6 +48,30 @@ public class ModBlocks {
     public static final DeferredBlock<Block> CHERRY_LOG_PEDESTAL = registerBlock("cherry_log_pedestal",
             () -> new CherryLogPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS)));
 
+    public static final DeferredBlock<Block> OAK_PLANKS_PEDESTAL = registerBlock("oak_planks_pedestal",
+            () -> new OakPlanksPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+
+    public static final DeferredBlock<Block> BIRCH_PLANKS_PEDESTAL = registerBlock("birch_planks_pedestal",
+            () -> new BirchPlanksPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS)));
+
+    public static final DeferredBlock<Block> DARK_OAK_PLANKS_PEDESTAL = registerBlock("dark_oak_planks_pedestal",
+            () -> new DarkOakPlanksPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS)));
+
+    public static final DeferredBlock<Block> SPRUCE_PLANKS_PEDESTAL = registerBlock("spruce_planks_pedestal",
+            () -> new SprucePlanksPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS)));
+
+    public static final DeferredBlock<Block> JUNGLE_PLANKS_PEDESTAL = registerBlock("jungle_planks_pedestal",
+            () -> new JunglePlanksPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS)));
+
+    public static final DeferredBlock<Block> ACACIA_PLANKS_PEDESTAL = registerBlock("acacia_planks_pedestal",
+            () -> new AcaciaPlanksPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS)));
+
+    public static final DeferredBlock<Block> MANGROVE_PLANKS_PEDESTAL = registerBlock("mangrove_planks_pedestal",
+            () -> new MangrovePlanksPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS)));
+
+    public static final DeferredBlock<Block> CHERRY_PLANKS_PEDESTAL = registerBlock("cherry_planks_pedestal",
+            () -> new CherryPlanksPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS)));
+
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
