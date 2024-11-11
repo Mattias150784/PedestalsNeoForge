@@ -56,6 +56,14 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.POLISHED_DIORITE_PEDESTAL.get());
                         pOutput.accept(ModBlocks.POLISHED_TUFF_PEDESTAL.get());
                         pOutput.accept(ModBlocks.POLISHED_DEEPSLATE_PEDESTAL.get());
+
+                        pOutput.accept(ModBlocks.BRICKS_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.MOSSY_COBBLESTONE_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.MOSSY_STONE_BRICKS_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.QUARTZ_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.QUARTZ_PILLAR_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.RED_SANDSTONE_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.SANDSTONE_PEDESTAL.get());
                     }).build());
 
 

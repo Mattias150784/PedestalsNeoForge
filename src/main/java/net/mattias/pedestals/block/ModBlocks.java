@@ -111,6 +111,27 @@ public class ModBlocks {
     public static final DeferredBlock<Block> POLISHED_DEEPSLATE_PEDESTAL = registerBlock("polished_deepslate_pedestal",
             () -> new PolishedDeepslatePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_DEEPSLATE)));
 
+    public static final DeferredBlock<Block> BRICKS_PEDESTAL = registerBlock("bricks_pedestal",
+            () -> new BricksPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
+
+    public static final DeferredBlock<Block> MOSSY_COBBLESTONE_PEDESTAL = registerBlock("mossy_cobblestone_pedestal",
+            () -> new MossyCobblestonePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
+
+    public static final DeferredBlock<Block> MOSSY_STONE_BRICKS_PEDESTAL = registerBlock("mossy_stone_bricks_pedestal",
+            () -> new MossyStoneBricksPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
+
+    public static final DeferredBlock<Block> QUARTZ_PEDESTAL = registerBlock("quartz_pedestal",
+            () -> new QuartzPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
+
+    public static final DeferredBlock<Block> QUARTZ_PILLAR_PEDESTAL = registerBlock("quartz_pillar_pedestal",
+            () -> new QuartzPillarPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_PILLAR)));
+
+    public static final DeferredBlock<Block> SANDSTONE_PEDESTAL = registerBlock("sandstone_pedestal",
+            () -> new SandstonePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
+
+    public static final DeferredBlock<Block> RED_SANDSTONE_PEDESTAL = registerBlock("red_sandstone_pedestal",
+            () -> new RedSandstonePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

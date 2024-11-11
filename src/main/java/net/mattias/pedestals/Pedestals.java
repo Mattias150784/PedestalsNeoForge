@@ -102,6 +102,14 @@ public class Pedestals
             event.registerBlockEntityRenderer(ModBlockEntities.ANDESITE_PEDESTAL_BE.get(), AndesitePedestalBlockEntityRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntities.DIORITE_PEDESTAL_BE.get(), DioritePedestalBlockEntityRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntities.GRANITE_PEDESTAL_BE.get(), GranitePedestalBlockEntityRenderer::new);
+
+            event.registerBlockEntityRenderer(ModBlockEntities.BRICKS_PEDESTAL_BE.get(), BricksPedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.MOSSY_COBBLESTONE_PEDESTAL_BE.get(), MossyCobblestonePedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.MOSSY_STONE_BRICKS_PEDESTAL_BE.get(), MossyStoneBricksPedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.QUARTZ_PEDESTAL_BE.get(), QuartzPedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.QUARTZ_PILLAR_PEDESTAL_BE.get(), QuartzPillarPedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.RED_SANDSTONE_PEDESTAL_BE.get(), RedSandstonePedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.SANDSTONE_PEDESTAL_BE.get(), SandstonePedestalBlockEntityRenderer::new);
         }
 
         @SubscribeEvent
@@ -139,6 +147,14 @@ public class Pedestals
             event.register(ModMenuTypes.ANDESITE_PEDESTAL_MENU.get(), AndesitePedestalScreen::new);
             event.register(ModMenuTypes.GRANITE_PEDESTAL_MENU.get(), GranitePedestalScreen::new);
             event.register(ModMenuTypes.DIORITE_PEDESTAL_MENU.get(), DioritePedestalScreen::new);
+
+            event.register(ModMenuTypes.BRICKS_PEDESTAL_MENU.get(), BricksPedestalScreen::new);
+            event.register(ModMenuTypes.MOSSY_COBBLESTONE_PEDESTAL_MENU.get(), MossyCobblestonePedestalScreen::new);
+            event.register(ModMenuTypes.MOSSY_STONE_BRICKS_PEDESTAL_MENU.get(), MossyStoneBricksPedestalScreen::new);
+            event.register(ModMenuTypes.QUARTZ_PEDESTAL_MENU.get(), QuartzPedestalScreen::new);
+            event.register(ModMenuTypes.QUARTZ_PILLAR_PEDESTAL_MENU.get(), QuartzPillarPedestalScreen::new);
+            event.register(ModMenuTypes.SANDSTONE_PEDESTAL_MENU.get(), SandstonePedestalScreen::new);
+            event.register(ModMenuTypes.RED_SANDSTONE_PEDESTAL_MENU.get(), RedSandstonePedestalScreen::new);
         }
     }
 }

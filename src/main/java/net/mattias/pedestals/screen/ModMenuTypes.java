@@ -104,7 +104,27 @@ public class ModMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<GranitePedestalMenu>> GRANITE_PEDESTAL_MENU =
             registerMenuType("granite_pedestal_menu", GranitePedestalMenu::new);
-    
+
+    public static final DeferredHolder<MenuType<?>, MenuType<BricksPedestalMenu>> BRICKS_PEDESTAL_MENU =
+            registerMenuType("bricks_pedestal_menu", BricksPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<MossyCobblestonePedestalMenu>> MOSSY_COBBLESTONE_PEDESTAL_MENU =
+            registerMenuType("mossy_cobblestone_pedestal_menu", MossyCobblestonePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<MossyStoneBricksPedestalMenu>> MOSSY_STONE_BRICKS_PEDESTAL_MENU =
+            registerMenuType("mossy_stone_bricks_pedestal_menu", MossyStoneBricksPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<RedSandstonePedestalMenu>> RED_SANDSTONE_PEDESTAL_MENU =
+            registerMenuType("red_sandstone_pedestal_menu", RedSandstonePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<SandstonePedestalMenu>> SANDSTONE_PEDESTAL_MENU =
+            registerMenuType("sandstone_pedestal_menu", SandstonePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<QuartzPedestalMenu>> QUARTZ_PEDESTAL_MENU =
+            registerMenuType("quartz_pedestal_menu", QuartzPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<QuartzPillarPedestalMenu>> QUARTZ_PILLAR_PEDESTAL_MENU =
+            registerMenuType("quartz_pillar_pedestal_menu", QuartzPillarPedestalMenu::new);
     
 
 
