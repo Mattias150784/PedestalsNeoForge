@@ -64,6 +64,23 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.QUARTZ_PILLAR_PEDESTAL.get());
                         pOutput.accept(ModBlocks.RED_SANDSTONE_PEDESTAL.get());
                         pOutput.accept(ModBlocks.SANDSTONE_PEDESTAL.get());
+
+                        pOutput.accept(ModBlocks.BLACK_CONCRETE_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.BLUE_CONCRETE_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.BROWN_CONCRETE_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.CYAN_CONCRETE_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.GRAY_CONCRETE_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.GREEN_CONCRETE_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.LIGHT_BLUE_CONCRETE_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.LIGHT_GRAY_CONCRETE_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.LIME_CONCRETE_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.MAGENTA_CONCRETE_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.ORANGE_CONCRETE_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.PINK_CONCRETE_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.PURPLE_CONCRETE_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.RED_CONCRETE_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.WHITE_CONCRETE_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.YELLOW_CONCRETE_PEDESTAL.get());
                     }).build());
 
 

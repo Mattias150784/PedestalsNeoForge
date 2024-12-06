@@ -110,6 +110,24 @@ public class Pedestals
             event.registerBlockEntityRenderer(ModBlockEntities.QUARTZ_PILLAR_PEDESTAL_BE.get(), QuartzPillarPedestalBlockEntityRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntities.RED_SANDSTONE_PEDESTAL_BE.get(), RedSandstonePedestalBlockEntityRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntities.SANDSTONE_PEDESTAL_BE.get(), SandstonePedestalBlockEntityRenderer::new);
+
+            event.registerBlockEntityRenderer(ModBlockEntities.BLACK_CONCRETE_PEDESTAL_BE.get(), BlackConcretePedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.BLUE_CONCRETE_PEDESTAL_BE.get(), BlueConcretePedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.BROWN_CONCRETE_PEDESTAL_BE.get(), BrownConcretePedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.CYAN_CONCRETE_PEDESTAL_BE.get(), CyanConcretePedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.GRAY_CONCRETE_PEDESTAL_BE.get(), GrayConcretePedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.GREEN_CONCRETE_PEDESTAL_BE.get(), GreenConcretePedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.LIGHT_BLUE_CONCRETE_PEDESTAL_BE.get(), LightBlueConcretePedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.LIGHT_GRAY_CONCRETE_PEDESTAL_BE.get(), LightGrayConcretePedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.LIME_CONCRETE_PEDESTAL_BE.get(), LimeConcretePedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.MAGENTA_CONCRETE_PEDESTAL_BE.get(), MagentaConcretePedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.ORANGE_CONCRETE_PEDESTAL_BE.get(), OrangeConcretePedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.PINK_CONCRETE_PEDESTAL_BE.get(), PinkConcretePedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.PURPLE_CONCRETE_PEDESTAL_BE.get(), PurpleConcretePedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.RED_CONCRETE_PEDESTAL_BE.get(), RedConcretePedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.WHITE_CONCRETE_PEDESTAL_BE.get(), WhiteConcretePedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.YELLOW_CONCRETE_PEDESTAL_BE.get(), YellowConcretePedestalBlockEntityRenderer::new);
+
         }
 
         @SubscribeEvent
@@ -155,6 +173,24 @@ public class Pedestals
             event.register(ModMenuTypes.QUARTZ_PILLAR_PEDESTAL_MENU.get(), QuartzPillarPedestalScreen::new);
             event.register(ModMenuTypes.SANDSTONE_PEDESTAL_MENU.get(), SandstonePedestalScreen::new);
             event.register(ModMenuTypes.RED_SANDSTONE_PEDESTAL_MENU.get(), RedSandstonePedestalScreen::new);
+
+            event.register(ModMenuTypes.BLACK_CONCRETE_PEDESTAL_MENU.get(), BlackConcretePedestalScreen::new);
+            event.register(ModMenuTypes.BLUE_CONCRETE_PEDESTAL_MENU.get(), BlueConcretePedestalScreen::new);
+            event.register(ModMenuTypes.BROWN_CONCRETE_PEDESTAL_MENU.get(), BrownConcretePedestalScreen::new);
+            event.register(ModMenuTypes.CYAN_CONCRETE_PEDESTAL_MENU.get(), CyanConcretePedestalScreen::new);
+            event.register(ModMenuTypes.GRAY_CONCRETE_PEDESTAL_MENU.get(), GrayConcretePedestalScreen::new);
+            event.register(ModMenuTypes.GREEN_CONCRETE_PEDESTAL_MENU.get(), GreenConcretePedestalScreen::new);
+            event.register(ModMenuTypes.LIGHT_BLUE_CONCRETE_PEDESTAL_MENU.get(), LightBlueConcretePedestalScreen::new);
+            event.register(ModMenuTypes.LIGHT_GRAY_CONCRETE_PEDESTAL_MENU.get(), LightGrayConcretePedestalScreen::new);
+            event.register(ModMenuTypes.LIME_CONCRETE_PEDESTAL_MENU.get(), LimeConcretePedestalScreen::new);
+            event.register(ModMenuTypes.MAGENTA_CONCRETE_PEDESTAL_MENU.get(), MagentaConcretePedestalScreen::new);
+            event.register(ModMenuTypes.ORANGE_CONCRETE_PEDESTAL_MENU.get(), OrangeConcretePedestalScreen::new);
+            event.register(ModMenuTypes.PINK_CONCRETE_PEDESTAL_MENU.get(), PinkConcretePedestalScreen::new);
+            event.register(ModMenuTypes.PURPLE_CONCRETE_PEDESTAL_MENU.get(), PurpleConcretePedestalScreen::new);
+            event.register(ModMenuTypes.RED_CONCRETE_PEDESTAL_MENU.get(), RedConcretePedestalScreen::new);
+            event.register(ModMenuTypes.WHITE_CONCRETE_PEDESTAL_MENU.get(), WhiteConcretePedestalScreen::new);
+            event.register(ModMenuTypes.YELLOW_CONCRETE_PEDESTAL_MENU.get(), YellowConcretePedestalScreen::new);
+
         }
     }
 }

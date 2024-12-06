@@ -3,13 +3,10 @@ package net.mattias.pedestals.block;
 import net.mattias.pedestals.Pedestals;
 import net.mattias.pedestals.block.custom.*;
 import net.mattias.pedestals.item.ModItems;
-import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -131,6 +128,54 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> RED_SANDSTONE_PEDESTAL = registerBlock("red_sandstone_pedestal",
             () -> new RedSandstonePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
+
+    public static final DeferredBlock<Block> BLACK_CONCRETE_PEDESTAL = registerBlock("black_concrete_pedestal",
+            () -> new BlackConcretePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_CONCRETE)));
+
+    public static final DeferredBlock<Block> BLUE_CONCRETE_PEDESTAL = registerBlock("blue_concrete_pedestal",
+            () -> new BlueConcretePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_CONCRETE)));
+
+    public static final DeferredBlock<Block> BROWN_CONCRETE_PEDESTAL = registerBlock("brown_concrete_pedestal",
+            () -> new BrownConcretePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_CONCRETE)));
+
+    public static final DeferredBlock<Block> GREEN_CONCRETE_PEDESTAL = registerBlock("green_concrete_pedestal",
+            () -> new GreenConcretePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_CONCRETE)));
+
+    public static final DeferredBlock<Block> GRAY_CONCRETE_PEDESTAL = registerBlock("gray_concrete_pedestal",
+            () -> new GrayConcretePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_CONCRETE)));
+
+    public static final DeferredBlock<Block> ORANGE_CONCRETE_PEDESTAL = registerBlock("orange_concrete_pedestal",
+            () -> new OrangeConcretePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_CONCRETE)));
+
+    public static final DeferredBlock<Block> PURPLE_CONCRETE_PEDESTAL = registerBlock("purple_concrete_pedestal",
+            () -> new PurpleConcretePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_CONCRETE)));
+
+    public static final DeferredBlock<Block> LIGHT_GRAY_CONCRETE_PEDESTAL = registerBlock("light_gray_concrete_pedestal",
+            () -> new LightGrayConcretePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_CONCRETE)));
+
+    public static final DeferredBlock<Block> LIGHT_BLUE_CONCRETE_PEDESTAL = registerBlock("light_blue_concrete_pedestal",
+            () -> new LightBlueConcretePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_CONCRETE)));
+
+    public static final DeferredBlock<Block> PINK_CONCRETE_PEDESTAL = registerBlock("pink_concrete_pedestal",
+            () -> new PinkConcretePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_CONCRETE)));
+
+    public static final DeferredBlock<Block> RED_CONCRETE_PEDESTAL = registerBlock("red_concrete_pedestal",
+            () -> new RedConcretePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_CONCRETE)));
+
+    public static final DeferredBlock<Block> WHITE_CONCRETE_PEDESTAL = registerBlock("white_concrete_pedestal",
+            () -> new WhiteConcretePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_CONCRETE)));
+
+    public static final DeferredBlock<Block> YELLOW_CONCRETE_PEDESTAL = registerBlock("yellow_concrete_pedestal",
+            () -> new YellowConcretePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_CONCRETE)));
+
+    public static final DeferredBlock<Block> MAGENTA_CONCRETE_PEDESTAL = registerBlock("magenta_concrete_pedestal",
+            () -> new MagentaConcretePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_CONCRETE)));
+
+    public static final DeferredBlock<Block> CYAN_CONCRETE_PEDESTAL = registerBlock("cyan_concrete_pedestal",
+            () -> new CyanConcretePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_CONCRETE)));
+
+    public static final DeferredBlock<Block> LIME_CONCRETE_PEDESTAL = registerBlock("lime_concrete_pedestal",
+            () -> new LimeConcretePedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_CONCRETE)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

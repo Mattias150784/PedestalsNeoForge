@@ -163,6 +163,70 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("quartz_pillar_pedestal", () -> BlockEntityType.Builder.of(
                     QuartzPillarPedestalBlockEntity::new, ModBlocks.QUARTZ_PILLAR_PEDESTAL.get()).build(null));
 
+    public static final Supplier<BlockEntityType<BlackConcretePedestalBlockEntity>> BLACK_CONCRETE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("black_concrete_pedestal", () -> BlockEntityType.Builder.of(
+                    BlackConcretePedestalBlockEntity::new, ModBlocks.BLACK_CONCRETE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<BlueConcretePedestalBlockEntity>> BLUE_CONCRETE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("blue_concrete_pedestal", () -> BlockEntityType.Builder.of(
+                    BlueConcretePedestalBlockEntity::new, ModBlocks.BLUE_CONCRETE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<BrownConcretePedestalBlockEntity>> BROWN_CONCRETE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("brown_concrete_pedestal", () -> BlockEntityType.Builder.of(
+                    BrownConcretePedestalBlockEntity::new, ModBlocks.BROWN_CONCRETE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<CyanConcretePedestalBlockEntity>> CYAN_CONCRETE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("cyan_concrete_pedestal", () -> BlockEntityType.Builder.of(
+                    CyanConcretePedestalBlockEntity::new, ModBlocks.CYAN_CONCRETE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<GrayConcretePedestalBlockEntity>> GRAY_CONCRETE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("gray_concrete_pedestal", () -> BlockEntityType.Builder.of(
+                    GrayConcretePedestalBlockEntity::new, ModBlocks.GRAY_CONCRETE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<GreenConcretePedestalBlockEntity>> GREEN_CONCRETE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("green_concrete_pedestal", () -> BlockEntityType.Builder.of(
+                    GreenConcretePedestalBlockEntity::new, ModBlocks.GREEN_CONCRETE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<LightBlueConcretePedestalBlockEntity>> LIGHT_BLUE_CONCRETE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("light_blue_concrete_pedestal", () -> BlockEntityType.Builder.of(
+                    LightBlueConcretePedestalBlockEntity::new, ModBlocks.LIGHT_BLUE_CONCRETE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<LightGrayConcretePedestalBlockEntity>> LIGHT_GRAY_CONCRETE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("light_gray_concrete_pedestal", () -> BlockEntityType.Builder.of(
+                    LightGrayConcretePedestalBlockEntity::new, ModBlocks.LIGHT_GRAY_CONCRETE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<LimeConcretePedestalBlockEntity>> LIME_CONCRETE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("lime_concrete_pedestal", () -> BlockEntityType.Builder.of(
+                    LimeConcretePedestalBlockEntity::new, ModBlocks.LIME_CONCRETE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<MagentaConcretePedestalBlockEntity>> MAGENTA_CONCRETE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("magenta_concrete_pedestal", () -> BlockEntityType.Builder.of(
+                    MagentaConcretePedestalBlockEntity::new, ModBlocks.MAGENTA_CONCRETE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<OrangeConcretePedestalBlockEntity>> ORANGE_CONCRETE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("orange_concrete_pedestal", () -> BlockEntityType.Builder.of(
+                    OrangeConcretePedestalBlockEntity::new, ModBlocks.ORANGE_CONCRETE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<PinkConcretePedestalBlockEntity>> PINK_CONCRETE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("pink_concrete_pedestal", () -> BlockEntityType.Builder.of(
+                    PinkConcretePedestalBlockEntity::new, ModBlocks.PINK_CONCRETE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<PurpleConcretePedestalBlockEntity>> PURPLE_CONCRETE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("purple_concrete_pedestal", () -> BlockEntityType.Builder.of(
+                    PurpleConcretePedestalBlockEntity::new, ModBlocks.PURPLE_CONCRETE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<RedConcretePedestalBlockEntity>> RED_CONCRETE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("red_concrete_pedestal", () -> BlockEntityType.Builder.of(
+                    RedConcretePedestalBlockEntity::new, ModBlocks.RED_CONCRETE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<WhiteConcretePedestalBlockEntity>> WHITE_CONCRETE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("white_concrete_pedestal", () -> BlockEntityType.Builder.of(
+                    WhiteConcretePedestalBlockEntity::new, ModBlocks.WHITE_CONCRETE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<YellowConcretePedestalBlockEntity>> YELLOW_CONCRETE_PEDESTAL_BE =
+            BLOCK_ENTITIES.register("yellow_concrete_pedestal", () -> BlockEntityType.Builder.of(
+                    YellowConcretePedestalBlockEntity::new, ModBlocks.YELLOW_CONCRETE_PEDESTAL.get()).build(null));
+
 
 
     public static void register(IEventBus eventBus) {

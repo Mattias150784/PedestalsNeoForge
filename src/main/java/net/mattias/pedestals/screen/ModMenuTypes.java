@@ -125,7 +125,55 @@ public class ModMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<QuartzPillarPedestalMenu>> QUARTZ_PILLAR_PEDESTAL_MENU =
             registerMenuType("quartz_pillar_pedestal_menu", QuartzPillarPedestalMenu::new);
-    
+
+    public static final DeferredHolder<MenuType<?>, MenuType<BlackConcretePedestalMenu>> BLACK_CONCRETE_PEDESTAL_MENU =
+            registerMenuType("black_concrete_pedestal_menu", BlackConcretePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<BlueConcretePedestalMenu>> BLUE_CONCRETE_PEDESTAL_MENU =
+            registerMenuType("blue_concrete_pedestal_menu", BlueConcretePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<BrownConcretePedestalMenu>> BROWN_CONCRETE_PEDESTAL_MENU =
+            registerMenuType("brown_concrete_pedestal_menu", BrownConcretePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<CyanConcretePedestalMenu>> CYAN_CONCRETE_PEDESTAL_MENU =
+            registerMenuType("cyan_concrete_pedestal_menu", CyanConcretePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<GrayConcretePedestalMenu>> GRAY_CONCRETE_PEDESTAL_MENU =
+            registerMenuType("gray_concrete_pedestal_menu", GrayConcretePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<GreenConcretePedestalMenu>> GREEN_CONCRETE_PEDESTAL_MENU =
+            registerMenuType("green_concrete_pedestal_menu", GreenConcretePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<LightBlueConcretePedestalMenu>> LIGHT_BLUE_CONCRETE_PEDESTAL_MENU =
+            registerMenuType("light_blue_concrete_pedestal_menu", LightBlueConcretePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<LightGrayConcretePedestalMenu>> LIGHT_GRAY_CONCRETE_PEDESTAL_MENU =
+            registerMenuType("light_gray_concrete_pedestal_menu", LightGrayConcretePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<LimeConcretePedestalMenu>> LIME_CONCRETE_PEDESTAL_MENU =
+            registerMenuType("lime_concrete_pedestal_menu", LimeConcretePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<MagentaConcretePedestalMenu>> MAGENTA_CONCRETE_PEDESTAL_MENU =
+            registerMenuType("magenta_concrete_pedestal_menu", MagentaConcretePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<OrangeConcretePedestalMenu>> ORANGE_CONCRETE_PEDESTAL_MENU =
+            registerMenuType("orange_concrete_pedestal_menu", OrangeConcretePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<PinkConcretePedestalMenu>> PINK_CONCRETE_PEDESTAL_MENU =
+            registerMenuType("pink_concrete_pedestal_menu", PinkConcretePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<PurpleConcretePedestalMenu>> PURPLE_CONCRETE_PEDESTAL_MENU =
+            registerMenuType("purple_concrete_pedestal_menu", PurpleConcretePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<RedConcretePedestalMenu>> RED_CONCRETE_PEDESTAL_MENU =
+            registerMenuType("red_concrete_pedestal_menu", RedConcretePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<WhiteConcretePedestalMenu>> WHITE_CONCRETE_PEDESTAL_MENU =
+            registerMenuType("white_concrete_pedestal_menu", WhiteConcretePedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<YellowConcretePedestalMenu>> YELLOW_CONCRETE_PEDESTAL_MENU =
+            registerMenuType("yellow_concrete_pedestal_menu", YellowConcretePedestalMenu::new);
+
 
 
     private static <T extends AbstractContainerMenu>DeferredHolder<MenuType<?>, MenuType<T>> registerMenuType(String name,
