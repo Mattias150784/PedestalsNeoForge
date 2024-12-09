@@ -227,6 +227,38 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("yellow_concrete_pedestal", () -> BlockEntityType.Builder.of(
                     YellowConcretePedestalBlockEntity::new, ModBlocks.YELLOW_CONCRETE_PEDESTAL.get()).build(null));
 
+    public static final Supplier<BlockEntityType<BlackstonePedestalBlockEntity>> BLACKSTONE_PEDESTAL =
+            BLOCK_ENTITIES.register("blackstone_pedestal", () -> BlockEntityType.Builder.of(
+                    BlackstonePedestalBlockEntity::new, ModBlocks.BLACKSTONE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<CryingObsidianPedestalBlockEntity>> CRYING_OBSIDIAN_PEDESTAL =
+            BLOCK_ENTITIES.register("crying_obsidian_pedestal", () -> BlockEntityType.Builder.of(
+                    CryingObsidianPedestalBlockEntity::new, ModBlocks.CRYING_OBSIDIAN_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<ObsidianPedestalBlockEntity>> OBSIDIAN_PEDESTAL =
+            BLOCK_ENTITIES.register("obsidian_pedestal", () -> BlockEntityType.Builder.of(
+                    ObsidianPedestalBlockEntity::new, ModBlocks.OBSIDIAN_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<NetherrackPedestalBlockEntity>> NETHERRACK_PEDESTAL =
+            BLOCK_ENTITIES.register("netherrack_pedestal", () -> BlockEntityType.Builder.of(
+                    NetherrackPedestalBlockEntity::new, ModBlocks.NETHERRACK_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<SoulSandPedestalBlockEntity>> SOUL_SAND_PEDESTAL =
+            BLOCK_ENTITIES.register("soul_sand_pedestal", () -> BlockEntityType.Builder.of(
+                    SoulSandPedestalBlockEntity::new, ModBlocks.SOUL_SAND_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<NetherBricksPedestalBlockEntity>> NETHER_BRICKS_PEDESTAL =
+            BLOCK_ENTITIES.register("nether_bricks_pedestal", () -> BlockEntityType.Builder.of(
+                    NetherBricksPedestalBlockEntity::new, ModBlocks.NETHER_BRICKS_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<RedNetherBricksPedestalBlockEntity>> RED_NETHER_BRICKS_PEDESTAL =
+            BLOCK_ENTITIES.register("red_nether_bricks_pedestal", () -> BlockEntityType.Builder.of(
+                    RedNetherBricksPedestalBlockEntity::new, ModBlocks.RED_NETHER_BRICKS_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<SoulSoilPedestalBlockEntity>> SOUL_SOIL_PEDESTAL =
+            BLOCK_ENTITIES.register("soul_soil_pedestal", () -> BlockEntityType.Builder.of(
+                    SoulSoilPedestalBlockEntity::new, ModBlocks.SOUL_SOIL_PEDESTAL.get()).build(null));
+
 
 
     public static void register(IEventBus eventBus) {

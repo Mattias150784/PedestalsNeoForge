@@ -174,7 +174,31 @@ public class ModMenuTypes {
     public static final DeferredHolder<MenuType<?>, MenuType<YellowConcretePedestalMenu>> YELLOW_CONCRETE_PEDESTAL_MENU =
             registerMenuType("yellow_concrete_pedestal_menu", YellowConcretePedestalMenu::new);
 
+    public static final DeferredHolder<MenuType<?>, MenuType<BlackstonePedestalMenu>> BLACKSTONE_PEDESTAL_MENU =
+            registerMenuType("blackstone_pedestal_menu", BlackstonePedestalMenu::new);
 
+    public static final DeferredHolder<MenuType<?>, MenuType<NetherrackPedestalMenu>> NETHERRACK_PEDESTAL_MENU =
+            registerMenuType("netherrack_pedestal_menu", NetherrackPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<CryingObsidianPedestalMenu>> CRYING_OBSIDIAN_PEDESTAL_MENU =
+            registerMenuType("crying_obsidian_pedestal_menu", CryingObsidianPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<ObsidianPedestalMenu>> OBSIDIAN_PEDESTAL_MENU =
+            registerMenuType("obsidian_pedestal_menu", ObsidianPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<NetherBricksPedestalMenu>> NETHER_BRICKS_PEDESTAL_MENU =
+            registerMenuType("nether_bricks_pedestal_menu", NetherBricksPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<RedNetherBricksPedestalMenu>> RED_NETHER_BRICKS_PEDESTAL_MENU =
+            registerMenuType("red_nether_bricks_pedestal_menu", RedNetherBricksPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<SoulSandPedestalMenu>> SOUL_SAND_PEDESTAL_MENU =
+            registerMenuType("soul_sand_pedestal_menu", SoulSandPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<SoulSoilPedestalMenu>> SOUL_SOIL_PEDESTAL_MENU =
+            registerMenuType("soul_soil_pedestal_menu", SoulSoilPedestalMenu::new);
+
+    
 
     private static <T extends AbstractContainerMenu>DeferredHolder<MenuType<?>, MenuType<T>> registerMenuType(String name,
                                                                                                               IContainerFactory<T> factory) {

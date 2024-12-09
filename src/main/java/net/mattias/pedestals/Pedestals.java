@@ -128,6 +128,15 @@ public class Pedestals
             event.registerBlockEntityRenderer(ModBlockEntities.WHITE_CONCRETE_PEDESTAL_BE.get(), WhiteConcretePedestalBlockEntityRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntities.YELLOW_CONCRETE_PEDESTAL_BE.get(), YellowConcretePedestalBlockEntityRenderer::new);
 
+            event.registerBlockEntityRenderer(ModBlockEntities.BLACKSTONE_PEDESTAL.get(), BlackstonePedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.CRYING_OBSIDIAN_PEDESTAL.get(), CryingObsidianPedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.OBSIDIAN_PEDESTAL.get(), ObsidianPedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.NETHERRACK_PEDESTAL.get(), NetherrackPedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.NETHER_BRICKS_PEDESTAL.get(), NetherBricksPedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.RED_NETHER_BRICKS_PEDESTAL.get(), RedNetherBricksPedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.SOUL_SOIL_PEDESTAL.get(), SoulSoilPedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.SOUL_SAND_PEDESTAL.get(), SoulSandPedestalBlockEntityRenderer::new);
+
         }
 
         @SubscribeEvent
@@ -190,6 +199,16 @@ public class Pedestals
             event.register(ModMenuTypes.RED_CONCRETE_PEDESTAL_MENU.get(), RedConcretePedestalScreen::new);
             event.register(ModMenuTypes.WHITE_CONCRETE_PEDESTAL_MENU.get(), WhiteConcretePedestalScreen::new);
             event.register(ModMenuTypes.YELLOW_CONCRETE_PEDESTAL_MENU.get(), YellowConcretePedestalScreen::new);
+
+            event.register(ModMenuTypes.BLACKSTONE_PEDESTAL_MENU.get(), BlackstonePedestalScreen::new);
+            event.register(ModMenuTypes.CRYING_OBSIDIAN_PEDESTAL_MENU.get(), CryingObsidianPedestalScreen::new);
+            event.register(ModMenuTypes.OBSIDIAN_PEDESTAL_MENU.get(), ObsidianPedestalScreen::new);
+            event.register(ModMenuTypes.NETHER_BRICKS_PEDESTAL_MENU.get(), NetherBricksPedestalScreen::new);
+            event.register(ModMenuTypes.RED_NETHER_BRICKS_PEDESTAL_MENU.get(), RedNetherBricksPedestalScreen::new);
+            event.register(ModMenuTypes.NETHERRACK_PEDESTAL_MENU.get(), NetherrackPedestalScreen::new);
+            event.register(ModMenuTypes.SOUL_SAND_PEDESTAL_MENU.get(), SoulSandPedestalScreen::new);
+            event.register(ModMenuTypes.SOUL_SOIL_PEDESTAL_MENU.get(), SoulSoilPedestalScreen::new);
+
 
         }
     }
