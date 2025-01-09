@@ -55,7 +55,16 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.PURPLE_CONCRETE_PEDESTAL.get(),
                         ModBlocks.RED_CONCRETE_PEDESTAL.get(),
                         ModBlocks.WHITE_CONCRETE_PEDESTAL.get(),
-                        ModBlocks.YELLOW_CONCRETE_PEDESTAL.get()
+                        ModBlocks.YELLOW_CONCRETE_PEDESTAL.get(),
+                        ModBlocks.CRYING_OBSIDIAN_PEDESTAL.get(),
+                        ModBlocks.OBSIDIAN_PEDESTAL.get(),
+                        ModBlocks.NETHERRACK_PEDESTAL.get(),
+                        ModBlocks.NETHER_BRICKS_PEDESTAL.get(),
+                        ModBlocks.RED_NETHER_BRICKS_PEDESTAL.get(),
+                        ModBlocks.PURPUR_BLOCK_PEDESTAL.get(),
+                        ModBlocks.PURPUR_PILLAR_PEDESTAL.get(),
+                        ModBlocks.END_STONE_BRICKS_PEDESTAL.get(),
+                        ModBlocks.END_STONE_PEDESTAL.get()
 
 
                );
@@ -81,10 +90,18 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
 
                 );
+        this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(ModBlocks.SOUL_SAND_PEDESTAL.get(),
+                        ModBlocks.SOUL_SOIL_PEDESTAL.get()
+
+                );
 
         this.tag(BlockTags.NEEDS_IRON_TOOL);
 
-        this.tag(BlockTags.NEEDS_DIAMOND_TOOL);
+        this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.CRYING_OBSIDIAN_PEDESTAL.get(),
+                        ModBlocks.OBSIDIAN_PEDESTAL.get()
+                );
 
         this.tag(Tags.Blocks.NEEDS_WOOD_TOOL)
                 .add(ModBlocks.PEDESTAL.get(),
@@ -139,7 +156,17 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.ACACIA_LOG_PEDESTAL.get(),
                         ModBlocks.CHERRY_LOG_PEDESTAL.get(),
                         ModBlocks.CHERRY_PLANKS_PEDESTAL.get(),
-                        ModBlocks.BAMBOO_PLANKS_PEDESTAL.get()
+                        ModBlocks.BAMBOO_PLANKS_PEDESTAL.get(),
+                        ModBlocks.BLACKSTONE_PEDESTAL.get(),
+                        ModBlocks.NETHERRACK_PEDESTAL.get(),
+                        ModBlocks.NETHER_BRICKS_PEDESTAL.get(),
+                        ModBlocks.RED_NETHER_BRICKS_PEDESTAL.get(),
+                        ModBlocks.SOUL_SOIL_PEDESTAL.get(),
+                        ModBlocks.SOUL_SAND_PEDESTAL.get(),
+                        ModBlocks.PURPUR_BLOCK_PEDESTAL.get(),
+                        ModBlocks.PURPUR_PILLAR_PEDESTAL.get(),
+                        ModBlocks.END_STONE_BRICKS_PEDESTAL.get(),
+                        ModBlocks.END_STONE_PEDESTAL.get()
                 );
 
 

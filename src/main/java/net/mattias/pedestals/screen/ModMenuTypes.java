@@ -198,6 +198,19 @@ public class ModMenuTypes {
     public static final DeferredHolder<MenuType<?>, MenuType<SoulSoilPedestalMenu>> SOUL_SOIL_PEDESTAL_MENU =
             registerMenuType("soul_soil_pedestal_menu", SoulSoilPedestalMenu::new);
 
+    public static final DeferredHolder<MenuType<?>, MenuType<EndStoneBricksPedestalMenu>> END_STONE_BRICKS_PEDESTAL_MENU =
+            registerMenuType("end_stone_bricks_pedestal_menu", EndStoneBricksPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<EndStonePedestalMenu>> END_STONE_PEDESTAL_MENU =
+            registerMenuType("end_stone_pedestal_menu", EndStonePedestalMenu::new);
+    
+    public static final DeferredHolder<MenuType<?>, MenuType<PurpurPillarPedestalMenu>> PURPUR_PILLAR_PEDESTAL_MENU =
+            registerMenuType("purpur_pillar_pedestal_menu", PurpurPillarPedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<PurpurBlockPedestalMenu>> PURPUR_BLOCK_PEDESTAL_MENU =
+            registerMenuType("purpur_block_pedestal_menu", PurpurBlockPedestalMenu::new);
+    
+
     
 
     private static <T extends AbstractContainerMenu>DeferredHolder<MenuType<?>, MenuType<T>> registerMenuType(String name,

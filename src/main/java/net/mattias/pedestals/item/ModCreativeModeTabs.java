@@ -32,7 +32,6 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.JUNGLE_LOG_PEDESTAL.get());
                         pOutput.accept(ModBlocks.MANGROVE_LOG_PEDESTAL.get());
                         pOutput.accept(ModBlocks.CHERRY_LOG_PEDESTAL.get());
-
                         pOutput.accept(ModBlocks.OAK_PLANKS_PEDESTAL.get());
                         pOutput.accept(ModBlocks.BIRCH_PLANKS_PEDESTAL.get());
                         pOutput.accept(ModBlocks.DARK_OAK_PLANKS_PEDESTAL.get());
@@ -42,12 +41,10 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.MANGROVE_PLANKS_PEDESTAL.get());
                         pOutput.accept(ModBlocks.CHERRY_PLANKS_PEDESTAL.get());
                         pOutput.accept(ModBlocks.BAMBOO_PLANKS_PEDESTAL.get());
-
                         pOutput.accept(ModBlocks.COBBLESTONE_PEDESTAL.get());
                         pOutput.accept(ModBlocks.STONE_PEDESTAL.get());
                         pOutput.accept(ModBlocks.STONE_BRICKS_PEDESTAL.get());
                         pOutput.accept(ModBlocks.SMOOTH_STONE_PEDESTAL.get());
-
                         pOutput.accept(ModBlocks.ANDESITE_PEDESTAL.get());
                         pOutput.accept(ModBlocks.GRANITE_PEDESTAL.get());
                         pOutput.accept(ModBlocks.DIORITE_PEDESTAL.get());
@@ -56,7 +53,6 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.POLISHED_DIORITE_PEDESTAL.get());
                         pOutput.accept(ModBlocks.POLISHED_TUFF_PEDESTAL.get());
                         pOutput.accept(ModBlocks.POLISHED_DEEPSLATE_PEDESTAL.get());
-
                         pOutput.accept(ModBlocks.BRICKS_PEDESTAL.get());
                         pOutput.accept(ModBlocks.MOSSY_COBBLESTONE_PEDESTAL.get());
                         pOutput.accept(ModBlocks.MOSSY_STONE_BRICKS_PEDESTAL.get());
@@ -64,7 +60,6 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.QUARTZ_PILLAR_PEDESTAL.get());
                         pOutput.accept(ModBlocks.RED_SANDSTONE_PEDESTAL.get());
                         pOutput.accept(ModBlocks.SANDSTONE_PEDESTAL.get());
-
                         pOutput.accept(ModBlocks.BLACK_CONCRETE_PEDESTAL.get());
                         pOutput.accept(ModBlocks.BLUE_CONCRETE_PEDESTAL.get());
                         pOutput.accept(ModBlocks.BROWN_CONCRETE_PEDESTAL.get());
@@ -81,8 +76,6 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.RED_CONCRETE_PEDESTAL.get());
                         pOutput.accept(ModBlocks.WHITE_CONCRETE_PEDESTAL.get());
                         pOutput.accept(ModBlocks.YELLOW_CONCRETE_PEDESTAL.get());
-
-
                         pOutput.accept(ModBlocks.BLACKSTONE_PEDESTAL.get());
                         pOutput.accept(ModBlocks.NETHER_BRICKS_PEDESTAL.get());
                         pOutput.accept(ModBlocks.RED_NETHER_BRICKS_PEDESTAL.get());
@@ -91,6 +84,10 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.OBSIDIAN_PEDESTAL.get());
                         pOutput.accept(ModBlocks.SOUL_SOIL_PEDESTAL.get());
                         pOutput.accept(ModBlocks.SOUL_SAND_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.END_STONE_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.END_STONE_BRICKS_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.PURPUR_BLOCK_PEDESTAL.get());
+                        pOutput.accept(ModBlocks.PURPUR_PILLAR_PEDESTAL.get());
                     }).build());
 
 

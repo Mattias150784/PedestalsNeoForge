@@ -64,6 +64,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         createBasicPedestalRecipe(recipeOutput, ModBlocks.RED_CONCRETE_PEDESTAL.get(), Blocks.RED_CONCRETE);
         createBasicPedestalRecipe(recipeOutput, ModBlocks.WHITE_CONCRETE_PEDESTAL.get(), Blocks.WHITE_CONCRETE);
         createBasicPedestalRecipe(recipeOutput, ModBlocks.YELLOW_CONCRETE_PEDESTAL.get(), Blocks.YELLOW_CONCRETE);
+        createBasicPedestalRecipe(recipeOutput, ModBlocks.BLACKSTONE_PEDESTAL.get(), Blocks.BLACKSTONE);
+        createBasicPedestalRecipe(recipeOutput, ModBlocks.NETHERRACK_PEDESTAL.get(), Blocks.NETHERRACK);
+        createBasicPedestalRecipe(recipeOutput, ModBlocks.NETHER_BRICKS_PEDESTAL.get(), Blocks.NETHER_BRICKS);
+        createBasicPedestalRecipe(recipeOutput, ModBlocks.RED_NETHER_BRICKS_PEDESTAL.get(), Blocks.RED_NETHER_BRICKS);
+        createBasicPedestalRecipe(recipeOutput, ModBlocks.CRYING_OBSIDIAN_PEDESTAL.get(), Blocks.CRYING_OBSIDIAN);
+        createBasicPedestalRecipe(recipeOutput, ModBlocks.OBSIDIAN_PEDESTAL.get(), Blocks.OBSIDIAN);
+        createBasicPedestalRecipe(recipeOutput, ModBlocks.SOUL_SAND_PEDESTAL.get(), Blocks.SOUL_SAND);
+        createBasicPedestalRecipe(recipeOutput, ModBlocks.SOUL_SOIL_PEDESTAL.get(), Blocks.SOUL_SOIL);
+        createBasicPedestalRecipe(recipeOutput, ModBlocks.END_STONE_PEDESTAL.get(), Blocks.END_STONE);
+        createBasicPedestalRecipe(recipeOutput, ModBlocks.END_STONE_BRICKS_PEDESTAL.get(), Blocks.END_STONE_BRICKS);
+        createBasicPedestalRecipe(recipeOutput, ModBlocks.PURPUR_BLOCK_PEDESTAL.get(), Blocks.PURPUR_BLOCK);
+        createBasicPedestalRecipe(recipeOutput, ModBlocks.PURPUR_PILLAR_PEDESTAL.get(), Blocks.PURPUR_PILLAR);
 
 
         createPlanksPedestalRecipe(recipeOutput, ModBlocks.OAK_PLANKS_PEDESTAL.get(), Blocks.OAK_PLANKS);

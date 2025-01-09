@@ -7,6 +7,7 @@ import net.mattias.pedestals.item.ModCreativeModeTabs;
 import net.mattias.pedestals.item.ModItems;
 import net.mattias.pedestals.screen.ModMenuTypes;
 import net.mattias.pedestals.screen.custom.*;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import org.slf4j.Logger;
@@ -137,6 +138,11 @@ public class Pedestals
             event.registerBlockEntityRenderer(ModBlockEntities.SOUL_SOIL_PEDESTAL.get(), SoulSoilPedestalBlockEntityRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntities.SOUL_SAND_PEDESTAL.get(), SoulSandPedestalBlockEntityRenderer::new);
 
+            event.registerBlockEntityRenderer(ModBlockEntities.END_STONE_BRICKS_PEDESTAL.get(), EndStoneBricksPedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.END_STONE_PEDESTAL.get(), EndStonePedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.PURPUR_BLOCK_PEDESTAL.get(), PurpurBlockPedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.PURPUR_PILLAR_PEDESTAL.get(), PurpurPillarPedestalBlockEntityRenderer::new);
+
         }
 
         @SubscribeEvent
@@ -208,6 +214,11 @@ public class Pedestals
             event.register(ModMenuTypes.NETHERRACK_PEDESTAL_MENU.get(), NetherrackPedestalScreen::new);
             event.register(ModMenuTypes.SOUL_SAND_PEDESTAL_MENU.get(), SoulSandPedestalScreen::new);
             event.register(ModMenuTypes.SOUL_SOIL_PEDESTAL_MENU.get(), SoulSoilPedestalScreen::new);
+
+            event.register(ModMenuTypes.END_STONE_BRICKS_PEDESTAL_MENU.get(), EndStoneBricksPedestalScreen::new);
+            event.register(ModMenuTypes.END_STONE_PEDESTAL_MENU.get(), EndStonePedestalScreen::new);
+            event.register(ModMenuTypes.PURPUR_BLOCK_PEDESTAL_MENU.get(), PurpurBlockPedestalScreen::new);
+            event.register(ModMenuTypes.PURPUR_PILLAR_PEDESTAL_MENU.get(), PurpurPillarPedestalScreen::new);
 
 
         }

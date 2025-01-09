@@ -259,6 +259,22 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("soul_soil_pedestal", () -> BlockEntityType.Builder.of(
                     SoulSoilPedestalBlockEntity::new, ModBlocks.SOUL_SOIL_PEDESTAL.get()).build(null));
 
+    public static final Supplier<BlockEntityType<EndStoneBricksPedestalBlockEntity>> END_STONE_BRICKS_PEDESTAL =
+            BLOCK_ENTITIES.register("end_stone_bricks_pedestal", () -> BlockEntityType.Builder.of(
+                    EndStoneBricksPedestalBlockEntity::new, ModBlocks.END_STONE_BRICKS_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<EndStonePedestalBlockEntity>> END_STONE_PEDESTAL =
+            BLOCK_ENTITIES.register("end_stone_pedestal", () -> BlockEntityType.Builder.of(
+                    EndStonePedestalBlockEntity::new, ModBlocks.END_STONE_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<PurpurBlockPedestalBlockEntity>> PURPUR_BLOCK_PEDESTAL =
+            BLOCK_ENTITIES.register("purpur_block_pedestal", () -> BlockEntityType.Builder.of(
+                    PurpurBlockPedestalBlockEntity::new, ModBlocks.PURPUR_BLOCK_PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<PurpurPillarPedestalBlockEntity>> PURPUR_PILLAR_PEDESTAL =
+            BLOCK_ENTITIES.register("purpur_pillar_pedestal", () -> BlockEntityType.Builder.of(
+                    PurpurPillarPedestalBlockEntity::new, ModBlocks.PURPUR_PILLAR_PEDESTAL.get()).build(null));
+
 
 
     public static void register(IEventBus eventBus) {
