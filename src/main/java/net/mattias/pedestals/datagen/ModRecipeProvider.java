@@ -1,139 +1,195 @@
 package net.mattias.pedestals.datagen;
 
 import net.mattias.pedestals.block.ModBlocks;
+import net.mattias.pedestals.PedestalVariant;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.*;
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
-import java.util.concurrent.CompletableFuture;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
-public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
 
-    public ModRecipeProvider(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pRegistries) {
-        super(pOutput, pRegistries);
+import java.util.EnumMap;
+import java.util.Map;
+import java.util.concurrent.CompletableFuture;
+
+public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
+    private static final Map<PedestalVariant, ItemLike> MATERIAL_MAP = new EnumMap<>(PedestalVariant.class);
+
+    static {
+        // Log variants
+        MATERIAL_MAP.put(PedestalVariant.OAK_LOG, Blocks.OAK_LOG);
+        MATERIAL_MAP.put(PedestalVariant.BIRCH_LOG, Blocks.BIRCH_LOG);
+        MATERIAL_MAP.put(PedestalVariant.ACACIA_LOG, Blocks.ACACIA_LOG);
+        MATERIAL_MAP.put(PedestalVariant.CHERRY_LOG, Blocks.CHERRY_LOG);
+        MATERIAL_MAP.put(PedestalVariant.DARK_OAK_LOG, Blocks.DARK_OAK_LOG);
+        MATERIAL_MAP.put(PedestalVariant.JUNGLE_LOG, Blocks.JUNGLE_LOG);
+        MATERIAL_MAP.put(PedestalVariant.MANGROVE_LOG, Blocks.MANGROVE_LOG);
+        MATERIAL_MAP.put(PedestalVariant.SPRUCE_LOG, Blocks.SPRUCE_LOG);
+
+        // Plank variants
+        MATERIAL_MAP.put(PedestalVariant.OAK_PLANKS, Blocks.OAK_PLANKS);
+        MATERIAL_MAP.put(PedestalVariant.BIRCH_PLANKS, Blocks.BIRCH_PLANKS);
+        MATERIAL_MAP.put(PedestalVariant.ACACIA_PLANKS, Blocks.ACACIA_PLANKS);
+        MATERIAL_MAP.put(PedestalVariant.CHERRY_PLANKS, Blocks.CHERRY_PLANKS);
+        MATERIAL_MAP.put(PedestalVariant.DARK_OAK_PLANKS, Blocks.DARK_OAK_PLANKS);
+        MATERIAL_MAP.put(PedestalVariant.JUNGLE_PLANKS, Blocks.JUNGLE_PLANKS);
+        MATERIAL_MAP.put(PedestalVariant.MANGROVE_PLANKS, Blocks.MANGROVE_PLANKS);
+        MATERIAL_MAP.put(PedestalVariant.SPRUCE_PLANKS, Blocks.SPRUCE_PLANKS);
+        MATERIAL_MAP.put(PedestalVariant.BAMBOO_PLANKS, Blocks.BAMBOO_PLANKS);
+
+        // Stone variants
+        MATERIAL_MAP.put(PedestalVariant.STONE, Blocks.STONE);
+        MATERIAL_MAP.put(PedestalVariant.COBBLESTONE, Blocks.COBBLESTONE);
+        MATERIAL_MAP.put(PedestalVariant.STONE_BRICKS, Blocks.STONE_BRICKS);
+        MATERIAL_MAP.put(PedestalVariant.SMOOTH_STONE, Blocks.SMOOTH_STONE);
+
+        MATERIAL_MAP.put(PedestalVariant.POLISHED_GRANITE, Blocks.POLISHED_GRANITE);
+        MATERIAL_MAP.put(PedestalVariant.POLISHED_DIORITE, Blocks.POLISHED_DIORITE);
+        MATERIAL_MAP.put(PedestalVariant.POLISHED_ANDESITE, Blocks.POLISHED_ANDESITE);
+        MATERIAL_MAP.put(PedestalVariant.GRANITE, Blocks.GRANITE);
+        MATERIAL_MAP.put(PedestalVariant.DIORITE, Blocks.DIORITE);
+        MATERIAL_MAP.put(PedestalVariant.ANDESITE, Blocks.ANDESITE);
+        MATERIAL_MAP.put(PedestalVariant.POLISHED_TUFF, Blocks.POLISHED_TUFF);
+        MATERIAL_MAP.put(PedestalVariant.POLISHED_DEEPSLATE, Blocks.POLISHED_DEEPSLATE);
+        MATERIAL_MAP.put(PedestalVariant.BRICKS, Blocks.BRICKS);
+        MATERIAL_MAP.put(PedestalVariant.MOSSY_COBBLESTONE, Blocks.MOSSY_COBBLESTONE);
+        MATERIAL_MAP.put(PedestalVariant.MOSSY_STONE_BRICKS, Blocks.MOSSY_STONE_BRICKS);
+
+        // Quartz & Sandstone
+        MATERIAL_MAP.put(PedestalVariant.QUARTZ, Blocks.QUARTZ_BLOCK);
+        MATERIAL_MAP.put(PedestalVariant.QUARTZ_PILLAR, Blocks.QUARTZ_PILLAR);
+        MATERIAL_MAP.put(PedestalVariant.RED_SANDSTONE, Blocks.RED_SANDSTONE);
+        MATERIAL_MAP.put(PedestalVariant.SANDSTONE, Blocks.SANDSTONE);
+
+        // Concrete variants
+        MATERIAL_MAP.put(PedestalVariant.BLACK_CONCRETE, Blocks.BLACK_CONCRETE);
+        MATERIAL_MAP.put(PedestalVariant.BLUE_CONCRETE, Blocks.BLUE_CONCRETE);
+        MATERIAL_MAP.put(PedestalVariant.BROWN_CONCRETE, Blocks.BROWN_CONCRETE);
+        MATERIAL_MAP.put(PedestalVariant.GREEN_CONCRETE, Blocks.GREEN_CONCRETE);
+        MATERIAL_MAP.put(PedestalVariant.GRAY_CONCRETE, Blocks.GRAY_CONCRETE);
+        MATERIAL_MAP.put(PedestalVariant.ORANGE_CONCRETE, Blocks.ORANGE_CONCRETE);
+        MATERIAL_MAP.put(PedestalVariant.PURPLE_CONCRETE, Blocks.PURPLE_CONCRETE);
+        MATERIAL_MAP.put(PedestalVariant.LIGHT_GRAY_CONCRETE, Blocks.LIGHT_GRAY_CONCRETE);
+        MATERIAL_MAP.put(PedestalVariant.LIGHT_BLUE_CONCRETE, Blocks.LIGHT_BLUE_CONCRETE);
+        MATERIAL_MAP.put(PedestalVariant.PINK_CONCRETE, Blocks.PINK_CONCRETE);
+        MATERIAL_MAP.put(PedestalVariant.RED_CONCRETE, Blocks.RED_CONCRETE);
+        MATERIAL_MAP.put(PedestalVariant.WHITE_CONCRETE, Blocks.WHITE_CONCRETE);
+        MATERIAL_MAP.put(PedestalVariant.YELLOW_CONCRETE, Blocks.YELLOW_CONCRETE);
+        MATERIAL_MAP.put(PedestalVariant.MAGENTA_CONCRETE, Blocks.MAGENTA_CONCRETE);
+        MATERIAL_MAP.put(PedestalVariant.CYAN_CONCRETE, Blocks.CYAN_CONCRETE);
+        MATERIAL_MAP.put(PedestalVariant.LIME_CONCRETE, Blocks.LIME_CONCRETE);
+
+        // Wool variants
+        MATERIAL_MAP.put(PedestalVariant.BLACK_WOOL, Blocks.BLACK_WOOL);
+        MATERIAL_MAP.put(PedestalVariant.BLUE_WOOL, Blocks.BLUE_WOOL);
+        MATERIAL_MAP.put(PedestalVariant.BROWN_WOOL, Blocks.BROWN_WOOL);
+        MATERIAL_MAP.put(PedestalVariant.GREEN_WOOL, Blocks.GREEN_WOOL);
+        MATERIAL_MAP.put(PedestalVariant.GRAY_WOOL, Blocks.GRAY_WOOL);
+        MATERIAL_MAP.put(PedestalVariant.ORANGE_WOOL, Blocks.ORANGE_WOOL);
+        MATERIAL_MAP.put(PedestalVariant.PURPLE_WOOL, Blocks.PURPLE_WOOL);
+        MATERIAL_MAP.put(PedestalVariant.LIGHT_GRAY_WOOL, Blocks.LIGHT_GRAY_WOOL);
+        MATERIAL_MAP.put(PedestalVariant.LIGHT_BLUE_WOOL, Blocks.LIGHT_BLUE_WOOL);
+        MATERIAL_MAP.put(PedestalVariant.PINK_WOOL, Blocks.PINK_WOOL);
+        MATERIAL_MAP.put(PedestalVariant.RED_WOOL, Blocks.RED_WOOL);
+        MATERIAL_MAP.put(PedestalVariant.WHITE_WOOL, Blocks.WHITE_WOOL);
+        MATERIAL_MAP.put(PedestalVariant.YELLOW_WOOL, Blocks.YELLOW_WOOL);
+        MATERIAL_MAP.put(PedestalVariant.MAGENTA_WOOL, Blocks.MAGENTA_WOOL);
+        MATERIAL_MAP.put(PedestalVariant.CYAN_WOOL, Blocks.CYAN_WOOL);
+        MATERIAL_MAP.put(PedestalVariant.LIME_WOOL, Blocks.LIME_WOOL);
+
+        // Terracotta variants
+        MATERIAL_MAP.put(PedestalVariant.TERRACOTTA, Blocks.TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.BLACK_TERRACOTTA, Blocks.BLACK_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.BLUE_TERRACOTTA, Blocks.BLUE_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.BROWN_TERRACOTTA, Blocks.BROWN_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.GREEN_TERRACOTTA, Blocks.GREEN_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.GRAY_TERRACOTTA, Blocks.GRAY_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.ORANGE_TERRACOTTA, Blocks.ORANGE_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.PURPLE_TERRACOTTA, Blocks.PURPLE_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.LIGHT_GRAY_TERRACOTTA, Blocks.LIGHT_GRAY_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.LIGHT_BLUE_TERRACOTTA, Blocks.LIGHT_BLUE_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.PINK_TERRACOTTA, Blocks.PINK_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.RED_TERRACOTTA, Blocks.RED_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.WHITE_TERRACOTTA, Blocks.WHITE_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.YELLOW_TERRACOTTA, Blocks.YELLOW_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.MAGENTA_TERRACOTTA, Blocks.MAGENTA_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.CYAN_TERRACOTTA, Blocks.CYAN_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.LIME_TERRACOTTA, Blocks.LIME_TERRACOTTA);
+
+        MATERIAL_MAP.put(PedestalVariant.BLACK_TERRACOTTA_GLAZED, Blocks.BLACK_GLAZED_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.BLUE_TERRACOTTA_GLAZED, Blocks.BLUE_GLAZED_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.BROWN_TERRACOTTA_GLAZED, Blocks.BROWN_GLAZED_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.GREEN_TERRACOTTA_GLAZED, Blocks.GREEN_GLAZED_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.GRAY_TERRACOTTA_GLAZED, Blocks.GRAY_GLAZED_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.ORANGE_TERRACOTTA_GLAZED, Blocks.ORANGE_GLAZED_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.PURPLE_TERRACOTTA_GLAZED, Blocks.PURPLE_GLAZED_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.LIGHT_GRAY_TERRACOTTA_GLAZED, Blocks.LIGHT_GRAY_GLAZED_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.LIGHT_BLUE_TERRACOTTA_GLAZED, Blocks.LIGHT_BLUE_GLAZED_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.PINK_TERRACOTTA_GLAZED, Blocks.PINK_GLAZED_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.RED_TERRACOTTA_GLAZED, Blocks.RED_GLAZED_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.WHITE_TERRACOTTA_GLAZED, Blocks.WHITE_GLAZED_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.YELLOW_TERRACOTTA_GLAZED, Blocks.YELLOW_GLAZED_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.MAGENTA_TERRACOTTA_GLAZED, Blocks.MAGENTA_GLAZED_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.CYAN_TERRACOTTA_GLAZED, Blocks.CYAN_GLAZED_TERRACOTTA);
+        MATERIAL_MAP.put(PedestalVariant.LIME_TERRACOTTA_GLAZED, Blocks.LIME_GLAZED_TERRACOTTA);
+
+        // Nether and End
+        MATERIAL_MAP.put(PedestalVariant.BLACKSTONE, Blocks.BLACKSTONE);
+        MATERIAL_MAP.put(PedestalVariant.CRYING_OBSIDIAN, Blocks.CRYING_OBSIDIAN);
+        MATERIAL_MAP.put(PedestalVariant.OBSIDIAN, Blocks.OBSIDIAN);
+        MATERIAL_MAP.put(PedestalVariant.NETHER_BRICKS, Blocks.NETHER_BRICKS);
+        MATERIAL_MAP.put(PedestalVariant.END_STONE_BRICKS, Blocks.END_STONE_BRICKS);
+        MATERIAL_MAP.put(PedestalVariant.END_STONE, Blocks.END_STONE);
+        MATERIAL_MAP.put(PedestalVariant.PURPUR_BLOCK, Blocks.PURPUR_BLOCK);
+    }
+
+
+    public ModRecipeProvider(PackOutput output, CompletableFuture<?> registries) {
+        super(output, (CompletableFuture<HolderLookup.Provider>) registries);
     }
 
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput) {
+        pedestalRecipe(recipeOutput, ModBlocks.PEDESTAL.get(), Blocks.CHISELED_STONE_BRICKS);
 
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.PEDESTAL.get(), Blocks.CHISELED_STONE_BRICKS);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.OAK_LOG_PEDESTAL.get(), Blocks.OAK_LOG);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.BIRCH_LOG_PEDESTAL.get(), Blocks.BIRCH_LOG);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.DARK_OAK_LOG_PEDESTAL.get(), Blocks.DARK_OAK_LOG);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.SPRUCE_LOG_PEDESTAL.get(), Blocks.SPRUCE_LOG);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.JUNGLE_LOG_PEDESTAL.get(), Blocks.JUNGLE_LOG);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.ACACIA_LOG_PEDESTAL.get(), Blocks.ACACIA_LOG);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.MANGROVE_LOG_PEDESTAL.get(), Blocks.MANGROVE_LOG);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.CHERRY_LOG_PEDESTAL.get(), Blocks.CHERRY_LOG);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.COBBLESTONE_PEDESTAL.get(), Blocks.COBBLESTONE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.STONE_PEDESTAL.get(), Blocks.STONE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.STONE_BRICKS_PEDESTAL.get(), Blocks.STONE_BRICKS);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.SMOOTH_STONE_PEDESTAL.get(), Blocks.SMOOTH_STONE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.POLISHED_TUFF_PEDESTAL.get(), Blocks.POLISHED_TUFF);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.POLISHED_DEEPSLATE_PEDESTAL.get(), Blocks.POLISHED_DEEPSLATE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.POLISHED_ANDESITE_PEDESTAL.get(), Blocks.POLISHED_ANDESITE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.POLISHED_GRANITE_PEDESTAL.get(), Blocks.POLISHED_GRANITE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.POLISHED_DIORITE_PEDESTAL.get(), Blocks.POLISHED_DIORITE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.GRANITE_PEDESTAL.get(), Blocks.GRANITE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.ANDESITE_PEDESTAL.get(), Blocks.ANDESITE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.DIORITE_PEDESTAL.get(), Blocks.DIORITE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.BRICKS_PEDESTAL.get(), Blocks.BRICKS);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.MOSSY_COBBLESTONE_PEDESTAL.get(), Blocks.MOSSY_COBBLESTONE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.MOSSY_STONE_BRICKS_PEDESTAL.get(), Blocks.MOSSY_STONE_BRICKS);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.QUARTZ_PEDESTAL.get(), Blocks.QUARTZ_BLOCK);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.QUARTZ_PILLAR_PEDESTAL.get(), Blocks.QUARTZ_PILLAR);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.SANDSTONE_PEDESTAL.get(), Blocks.SANDSTONE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.RED_SANDSTONE_PEDESTAL.get(), Blocks.RED_SANDSTONE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.BLACK_CONCRETE_PEDESTAL.get(), Blocks.BLACK_CONCRETE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.BLUE_CONCRETE_PEDESTAL.get(), Blocks.BLUE_CONCRETE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.BROWN_CONCRETE_PEDESTAL.get(), Blocks.BROWN_CONCRETE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.CYAN_CONCRETE_PEDESTAL.get(), Blocks.CYAN_CONCRETE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.GRAY_CONCRETE_PEDESTAL.get(), Blocks.GRAY_CONCRETE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.GREEN_CONCRETE_PEDESTAL.get(), Blocks.GREEN_CONCRETE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.LIGHT_BLUE_CONCRETE_PEDESTAL.get(), Blocks.LIGHT_BLUE_CONCRETE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.LIGHT_GRAY_CONCRETE_PEDESTAL.get(), Blocks.LIGHT_GRAY_CONCRETE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.LIME_CONCRETE_PEDESTAL.get(), Blocks.LIME_CONCRETE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.MAGENTA_CONCRETE_PEDESTAL.get(), Blocks.MAGENTA_CONCRETE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.ORANGE_CONCRETE_PEDESTAL.get(), Blocks.ORANGE_CONCRETE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.PINK_CONCRETE_PEDESTAL.get(), Blocks.PINK_CONCRETE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.PURPLE_CONCRETE_PEDESTAL.get(), Blocks.PURPLE_CONCRETE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.RED_CONCRETE_PEDESTAL.get(), Blocks.RED_CONCRETE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.WHITE_CONCRETE_PEDESTAL.get(), Blocks.WHITE_CONCRETE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.YELLOW_CONCRETE_PEDESTAL.get(), Blocks.YELLOW_CONCRETE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.BLACKSTONE_PEDESTAL.get(), Blocks.BLACKSTONE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.NETHERRACK_PEDESTAL.get(), Blocks.NETHERRACK);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.NETHER_BRICKS_PEDESTAL.get(), Blocks.NETHER_BRICKS);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.RED_NETHER_BRICKS_PEDESTAL.get(), Blocks.RED_NETHER_BRICKS);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.CRYING_OBSIDIAN_PEDESTAL.get(), Blocks.CRYING_OBSIDIAN);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.OBSIDIAN_PEDESTAL.get(), Blocks.OBSIDIAN);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.SOUL_SAND_PEDESTAL.get(), Blocks.SOUL_SAND);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.SOUL_SOIL_PEDESTAL.get(), Blocks.SOUL_SOIL);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.END_STONE_PEDESTAL.get(), Blocks.END_STONE);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.END_STONE_BRICKS_PEDESTAL.get(), Blocks.END_STONE_BRICKS);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.PURPUR_BLOCK_PEDESTAL.get(), Blocks.PURPUR_BLOCK);
-        createBasicPedestalRecipe(recipeOutput, ModBlocks.PURPUR_PILLAR_PEDESTAL.get(), Blocks.PURPUR_PILLAR);
+        for (PedestalVariant variant : PedestalVariant.values()) {
+            ItemLike pedestalBlock = ModBlocks.PEDESTAL_BLOCKS.get(variant).get();
+            ItemLike material = MATERIAL_MAP.getOrDefault(variant, Blocks.STONE);
 
-
-        createPlanksPedestalRecipe(recipeOutput, ModBlocks.OAK_PLANKS_PEDESTAL.get(), Blocks.OAK_PLANKS);
-        createPlanksPedestalRecipe(recipeOutput, ModBlocks.BIRCH_PLANKS_PEDESTAL.get(), Blocks.BIRCH_PLANKS);
-        createPlanksPedestalRecipe(recipeOutput, ModBlocks.DARK_OAK_PLANKS_PEDESTAL.get(), Blocks.DARK_OAK_PLANKS);
-        createPlanksPedestalRecipe(recipeOutput, ModBlocks.ACACIA_PLANKS_PEDESTAL.get(), Blocks.ACACIA_PLANKS);
-        createPlanksPedestalRecipe(recipeOutput, ModBlocks.SPRUCE_PLANKS_PEDESTAL.get(), Blocks.SPRUCE_PLANKS);
-        createPlanksPedestalRecipe(recipeOutput, ModBlocks.JUNGLE_PLANKS_PEDESTAL.get(), Blocks.JUNGLE_PLANKS);
-        createPlanksPedestalRecipe(recipeOutput, ModBlocks.MANGROVE_PLANKS_PEDESTAL.get(), Blocks.MANGROVE_PLANKS);
-        createPlanksPedestalRecipe(recipeOutput, ModBlocks.CHERRY_PLANKS_PEDESTAL.get(), Blocks.CHERRY_PLANKS);
-        createPlanksPedestalRecipe(recipeOutput, ModBlocks.BAMBOO_PLANKS_PEDESTAL.get(), Blocks.BAMBOO);
-
-
-
+            if (isPlankVariant(variant)) {
+                planksPedestalRecipe(recipeOutput, pedestalBlock, material);
+            } else {
+                pedestalRecipe(recipeOutput, pedestalBlock, material);
+            }
+        }
     }
 
+    private boolean isPlankVariant(PedestalVariant variant) {
+        return variant.name().endsWith("_PLANKS");
+    }
 
-
-
-
-
-
-
-
-
-
-
-    /**
-     * Creates a basic pedestal recipe using the given material.
-     *
-     * @param recipeOutput  Recipe output object
-     * @param pedestalBlock The block to be crafted
-     * @param material      The material used in the recipe
-     */
-    private void createBasicPedestalRecipe(RecipeOutput recipeOutput, ItemLike pedestalBlock, ItemLike material) {
+    private void pedestalRecipe(RecipeOutput recipeOutput, ItemLike pedestalBlock, ItemLike material) {
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, pedestalBlock)
                 .pattern("   ")
-                .pattern(" M ")
-                .pattern(" M ")
-                .define('M', material)
-                .unlockedBy("has_" + material.asItem().getDescriptionId(), has(material))
+                .pattern(" P ")
+                .pattern(" P ")
+                .define('P', material)
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(material.asItem()).getPath(), has(material))
                 .save(recipeOutput);
     }
 
-    /**
-     * Creates a pedestal recipe with planks and an additional layer on top.
-     *
-     * @param recipeOutput  Recipe output object
-     * @param pedestalBlock The block to be crafted
-     * @param material      The material used in the recipe
-     */
-    private void createPlanksPedestalRecipe(RecipeOutput recipeOutput, ItemLike pedestalBlock, ItemLike material) {
+    private void planksPedestalRecipe(RecipeOutput recipeOutput, ItemLike pedestalBlock, ItemLike material) {
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, pedestalBlock)
-                .pattern(" M ")
-                .pattern(" M ")
-                .pattern(" M ")
-                .define('M', material)
-                .unlockedBy("has_" + material.asItem().getDescriptionId(), has(material))
+                .pattern(" P ")
+                .pattern(" P ")
+                .pattern(" P ")
+                .define('P', material)
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(material.asItem()).getPath(), has(material))
                 .save(recipeOutput);
     }
 }

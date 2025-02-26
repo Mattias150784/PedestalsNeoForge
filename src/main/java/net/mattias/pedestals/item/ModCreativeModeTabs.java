@@ -1,5 +1,6 @@
 package net.mattias.pedestals.item;
 
+import net.mattias.pedestals.PedestalVariant;
 import net.mattias.pedestals.Pedestals;
 import net.mattias.pedestals.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
@@ -18,77 +19,17 @@ public class ModCreativeModeTabs {
 
 
 
-    public static final Supplier<CreativeModeTab> PEDESTALS_TAB =
-            CREATIVE_MODE_TABS.register("pedestals_tab", () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.pedestals.pedestals_tab"))
-                    .icon(() -> new ItemStack(ModBlocks.PEDESTAL))
-                    .displayItems((pParameters, pOutput) -> {
-                        pOutput.accept(ModBlocks.PEDESTAL.get());
-                        pOutput.accept(ModBlocks.OAK_LOG_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.BIRCH_LOG_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.DARK_OAK_LOG_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.SPRUCE_LOG_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.ACACIA_LOG_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.JUNGLE_LOG_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.MANGROVE_LOG_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.CHERRY_LOG_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.OAK_PLANKS_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.BIRCH_PLANKS_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.DARK_OAK_PLANKS_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.SPRUCE_PLANKS_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.ACACIA_PLANKS_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.JUNGLE_PLANKS_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.MANGROVE_PLANKS_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.CHERRY_PLANKS_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.BAMBOO_PLANKS_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.COBBLESTONE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.STONE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.STONE_BRICKS_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.SMOOTH_STONE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.ANDESITE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.GRANITE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.DIORITE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.POLISHED_ANDESITE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.POLISHED_GRANITE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.POLISHED_DIORITE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.POLISHED_TUFF_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.POLISHED_DEEPSLATE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.BRICKS_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.MOSSY_COBBLESTONE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.MOSSY_STONE_BRICKS_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.QUARTZ_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.QUARTZ_PILLAR_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.RED_SANDSTONE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.SANDSTONE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.BLACK_CONCRETE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.BLUE_CONCRETE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.BROWN_CONCRETE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.CYAN_CONCRETE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.GRAY_CONCRETE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.GREEN_CONCRETE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.LIGHT_BLUE_CONCRETE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.LIGHT_GRAY_CONCRETE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.LIME_CONCRETE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.MAGENTA_CONCRETE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.ORANGE_CONCRETE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.PINK_CONCRETE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.PURPLE_CONCRETE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.RED_CONCRETE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.WHITE_CONCRETE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.YELLOW_CONCRETE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.BLACKSTONE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.NETHER_BRICKS_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.RED_NETHER_BRICKS_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.NETHERRACK_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.CRYING_OBSIDIAN_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.OBSIDIAN_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.SOUL_SOIL_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.SOUL_SAND_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.END_STONE_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.END_STONE_BRICKS_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.PURPUR_BLOCK_PEDESTAL.get());
-                        pOutput.accept(ModBlocks.PURPUR_PILLAR_PEDESTAL.get());
-                    }).build());
+    public static final Supplier<CreativeModeTab> PEDESTALS = CREATIVE_MODE_TABS.register("pedestals_tab",
+            () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(ModBlocks.PEDESTAL.get()))
+                    .title(Component.translatable("creativetab.pedestals"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModBlocks.PEDESTAL.get());
+                        for (PedestalVariant variant : PedestalVariant.values()) {
+                            output.accept(ModBlocks.PEDESTAL_BLOCKS.get(variant).get());
+                        }
+                    })
+                    .build());
 
 
 
