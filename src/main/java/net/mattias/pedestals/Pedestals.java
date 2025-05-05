@@ -1,85 +1,39 @@
 package net.mattias.pedestals;
 
-import net.mattias.pedestals.block.ModBlocks;
-import net.mattias.pedestals.block.entity.ModBlockEntities;
-import net.mattias.pedestals.block.entity.renderer.*;
-import net.mattias.pedestals.item.ModCreativeModeTabs;
-import net.mattias.pedestals.item.ModItems;
-import net.mattias.pedestals.screen.ModMenuTypes;
-import net.mattias.pedestals.screen.custom.*;
-import net.minecraft.client.gui.screens.MenuScreens;
-import net.neoforged.neoforge.client.event.EntityRenderersEvent;
-import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import com.mojang.logging.LogUtils;
+import net.neoforged.fml.ModList;
 import org.slf4j.Logger;
 
-import com.mojang.logging.LogUtils;
-
-import net.neoforged.api.distmarker.Dist;
+import net.mattias.pedestals.core.Constants;
+import net.mattias.pedestals.core.optional.BasePedestalVariants;
+import net.mattias.pedestals.core.optional.BiomeOPlentyVariants;
+import net.mattias.pedestals.core.registry.ObjectRegistry;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.ModContainer;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
-// The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(Pedestals.MOD_ID)
-public class Pedestals
-{
-    public static final String MOD_ID = "pedestals";
+@Mod(Constants.MOD_ID)
+public class Pedestals {
+
+    public static IEventBus EVENT_BUS;
     private static final Logger LOGGER = LogUtils.getLogger();
 
 
+    public Pedestals(IEventBus modEventBus) {
+        EVENT_BUS = modEventBus;
 
-    public Pedestals(IEventBus modEventBus, ModContainer modContainer)
-    {
-
-        modEventBus.addListener(this::commonSetup);
-
-        ModBlocks.register(modEventBus);
-        ModCreativeModeTabs.register(modEventBus);
-        ModItems.register(modEventBus);
-        ModBlockEntities.register(modEventBus);
-        ModMenuTypes.register(modEventBus);
-
-        NeoForge.EVENT_BUS.register(this);
-
-
-    }
-
-    private void commonSetup(final FMLCommonSetupEvent event)
-    {
-
-    }
-
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event)
-    {
-
-    }
-
-    @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-
+        BasePedestalVariants.define();
+        if (ModList.get().isLoaded("biomesoplenty")) {
+            BiomeOPlentyVariants.define();
         }
 
-        @SubscribeEvent
-        public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
-            event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL_BE.get(), PedestalBlockEntityRenderer::new);
+        ObjectRegistry.register(EVENT_BUS);
 
-        }
-
-        @SubscribeEvent
-        public static void registerScreens(RegisterMenuScreensEvent event) {
-            event.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
+        LOGGER.info("Pedestals (NeoForge) initialized with mod-bus {}", EVENT_BUS);
+    }
 
 
-
-        }
+    public static ResourceLocation identifier(String path) {
+        return ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, path);
     }
 }

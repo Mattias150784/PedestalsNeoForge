@@ -1,8 +1,9 @@
 package net.mattias.pedestals.datagen;
 
-import net.mattias.pedestals.Pedestals;
-import net.mattias.pedestals.block.ModBlocks;
-import net.mattias.pedestals.PedestalVariant;
+import net.mattias.pedestals.core.Constants;
+import net.mattias.pedestals.core.registry.ModBlocks;
+import net.mattias.pedestals.core.util.PedestalVariant;
+import net.mattias.pedestals.core.util.PedestalVariants;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
@@ -13,14 +14,14 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 public class ModBlockStateProvider extends BlockStateProvider {
 
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, Pedestals.MOD_ID, existingFileHelper);
+        super(output, Constants.MOD_ID, existingFileHelper);
     }
 
     @Override
     protected void registerStatesAndModels() {
         pedestalBlock(ModBlocks.PEDESTAL.get(), "pedestal");
-        for (PedestalVariant variant : PedestalVariant.values()) {
-            pedestalBlock(ModBlocks.PEDESTAL_BLOCKS.get(variant).get(), variant.getRegistryName());
+        for (PedestalVariant variant : PedestalVariants.VARIANTS) {
+            pedestalBlock(ModBlocks.REGISTERED_VARIANT_MAP.get(variant).get(), variant.registryName());
         }
     }
 

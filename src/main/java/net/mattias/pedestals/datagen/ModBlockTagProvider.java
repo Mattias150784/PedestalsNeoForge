@@ -1,8 +1,9 @@
 package net.mattias.pedestals.datagen;
 
-import net.mattias.pedestals.PedestalVariant;
-import net.mattias.pedestals.Pedestals;
-import net.mattias.pedestals.block.ModBlocks;
+import net.mattias.pedestals.core.Constants;
+import net.mattias.pedestals.core.registry.ModBlocks;
+import net.mattias.pedestals.core.util.PedestalVariant;
+import net.mattias.pedestals.core.util.PedestalVariants;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
@@ -17,7 +18,7 @@ import java.util.concurrent.CompletableFuture;
 public class ModBlockTagProvider extends BlockTagsProvider {
 
     public ModBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, Pedestals.MOD_ID, existingFileHelper);
+        super(output, lookupProvider, Constants.MOD_ID, existingFileHelper);
     }
 
     @Override
@@ -25,12 +26,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.PEDESTAL.get());
 
-        // Adding Wool Pedestals properly
         this.tag(BlockTags.WOOL);
 
-        for (PedestalVariant variant : PedestalVariant.values()) {
-            Block block = ModBlocks.PEDESTAL_BLOCKS.get(variant).get();
-            String name = variant.getRegistryName();
+        for (PedestalVariant variant : PedestalVariants.VARIANTS) {
+            Block block = ModBlocks.REGISTERED_VARIANT_MAP.get(variant).get();
+            String name = variant.registryName();
 
             if (name.contains("wool")) {
                 this.tag(BlockTags.WOOL).add(block);
@@ -43,12 +43,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
             }
         }
 
+
         this.tag(Tags.Blocks.NEEDS_WOOD_TOOL)
                 .add(ModBlocks.PEDESTAL.get());
-        for (PedestalVariant variant : PedestalVariant.values()) {
+        for (PedestalVariant variant : PedestalVariants.VARIANTS) {
             this.tag(Tags.Blocks.NEEDS_WOOD_TOOL)
-                    .add(ModBlocks.PEDESTAL_BLOCKS.get(variant).get());
+                    .add(ModBlocks.REGISTERED_VARIANT_MAP.get(variant).get());
         }
+
 
 
 
