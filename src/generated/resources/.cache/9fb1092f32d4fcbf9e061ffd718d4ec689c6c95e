@@ -1,7 +1,9 @@
-// 1.21.1	2025-05-05T11:17:36.7287066	Recipes
+// 1.21.1	2025-05-05T12:20:30.036187	Recipes
 0bbe646dfad97c01fad8fcc64bb0090b04578063 data/pedestals/advancement/recipes/misc/acacia_log_pedestal.json
 31f3e76424ce5fa3d13ce4eeaeade8260e5090ff data/pedestals/advancement/recipes/misc/acacia_planks_pedestal.json
 5e3c4df2fa80a3e1f181d8117c0b37689fcc64ec data/pedestals/advancement/recipes/misc/andesite_pedestal.json
+3de4c64f9ad03f31a1018cece69d9fa8ad1f4695 data/pedestals/advancement/recipes/misc/apricorn_log_pedestal.json
+099d47cf5872635c7937ad56d2ea373ef6788afe data/pedestals/advancement/recipes/misc/apricorn_planks_pedestal.json
 56ca5d2674cd575787f95ba7c796e9162d701c59 data/pedestals/advancement/recipes/misc/bamboo_planks_pedestal.json
 37ff68883d4c11c112ceabfeed2dab93593c54e1 data/pedestals/advancement/recipes/misc/birch_log_pedestal.json
 73694e23ccc2c51e380058cc2baf2ebf7048b333 data/pedestals/advancement/recipes/misc/birch_planks_pedestal.json
@@ -144,6 +146,8 @@ cda21466ee24b0a4a3494dd5d20e3e8e0eac7ed7 data/pedestals/advancement/recipes/misc
 7296990a91a07bafc7e49483d1d5f556f4d2cdb9 data/pedestals/recipe/acacia_log_pedestal.json
 e82108a05af9ba664a01c574f6e5dc64373fbf67 data/pedestals/recipe/acacia_planks_pedestal.json
 92eeb26252b128ddc45341807fd25ce33dcc21a7 data/pedestals/recipe/andesite_pedestal.json
+7968a9eec2a8e51da08f07f3f7b1886e6c25748e data/pedestals/recipe/apricorn_log_pedestal.json
+340f5f23651d3a57ce1d555b03d8de6e838ad959 data/pedestals/recipe/apricorn_planks_pedestal.json
 fe1da74d8df9b034fd2e583f89c1096b49b1f0cf data/pedestals/recipe/bamboo_planks_pedestal.json
 7f2987d5917e48923cc90f198c497f648a66c864 data/pedestals/recipe/birch_log_pedestal.json
 231b7f1b311d6aef560a85483e939d1acb519a13 data/pedestals/recipe/birch_planks_pedestal.json

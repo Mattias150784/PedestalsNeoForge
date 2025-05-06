@@ -42,6 +42,8 @@
     "pedestals:magic_log_pedestal",
     "pedestals:umbran_log_pedestal",
     "pedestals:hellbark_log_pedestal",
-    "pedestals:empyreal_log_pedestal"
+    "pedestals:empyreal_log_pedestal",
+    "pedestals:apricorn_planks_pedestal",
+    "pedestals:apricorn_log_pedestal"
   ]
 }

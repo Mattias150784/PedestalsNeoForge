@@ -1,7 +1,9 @@
-// 1.21.1	2025-05-05T10:47:32.1795384	Block States: pedestals
+// 1.21.1	2025-05-05T12:20:30.0207734	Block States: pedestals
 87bc2ae38f9d5a0ce9b347d59fb300f0fe349c0b assets/pedestals/blockstates/acacia_log_pedestal.json
 5c8d1c3805307018a966e2a4fb18132d5cf4c864 assets/pedestals/blockstates/acacia_planks_pedestal.json
 2622b3210ca5faa023d76c9dd894f4ed72379c3d assets/pedestals/blockstates/andesite_pedestal.json
+6070f7c77b1a1e4d913d7b19dbdb798889f867c7 assets/pedestals/blockstates/apricorn_log_pedestal.json
+b503fac839caf3508a0361811fba5c8b79dd5795 assets/pedestals/blockstates/apricorn_planks_pedestal.json
 1d844856c5c3e4a292e1fd295a61175ee97dedd6 assets/pedestals/blockstates/bamboo_planks_pedestal.json
 6ac7932fed7d7ee2ed9becd1e539219113bda9c5 assets/pedestals/blockstates/birch_log_pedestal.json
 bc75938c266b7dcc5dcc8cbebd1767cc949083fe assets/pedestals/blockstates/birch_planks_pedestal.json
@@ -144,6 +146,8 @@ d53345ccf39a2190aff55adc097967dcd693ac4f assets/pedestals/blockstates/yellow_woo
 ca3a79b21350e84eafd060f049b04f1ba2581e41 assets/pedestals/models/item/acacia_log_pedestal.json
 6ae24e92e6f8770150712f06a07dd2909a0bac87 assets/pedestals/models/item/acacia_planks_pedestal.json
 6610db0d1d9d7f6e82a29cf82b7cfd3a58d41cd8 assets/pedestals/models/item/andesite_pedestal.json
+be53ccd7d3c316c085ff2b32d2c9098fed93c0b0 assets/pedestals/models/item/apricorn_log_pedestal.json
+e85dbc7c4bc5d16b694f3c244a13fd268584ea6a assets/pedestals/models/item/apricorn_planks_pedestal.json
 26c6093fecd39d52d2a0019139d9cd4c64db53e5 assets/pedestals/models/item/bamboo_planks_pedestal.json
 9c79e93738e1cd2570ff8922d08302ac5a93445a assets/pedestals/models/item/birch_log_pedestal.json
 092195f5dda2f899d887346e456cfe5d774a2543 assets/pedestals/models/item/birch_planks_pedestal.json

@@ -1,6 +1,7 @@
 package net.mattias.pedestals;
 
 import com.mojang.logging.LogUtils;
+import net.mattias.pedestals.core.optional.CobblemonVariants;
 import net.neoforged.fml.ModList;
 import org.slf4j.Logger;
 
@@ -25,6 +26,10 @@ public class Pedestals {
         BasePedestalVariants.define();
         if (ModList.get().isLoaded("biomesoplenty")) {
             BiomeOPlentyVariants.define();
+        }
+
+        if (ModList.get().isLoaded("cobblemon")) {
+            CobblemonVariants.define();
         }
 
         ObjectRegistry.register(EVENT_BUS);

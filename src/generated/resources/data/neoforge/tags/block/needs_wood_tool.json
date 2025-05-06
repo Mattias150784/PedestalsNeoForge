@@ -141,6 +141,8 @@
     "pedestals:empyreal_log_pedestal",
     "pedestals:brimstone_pedestal",
     "pedestals:brimstone_bricks_pedestal",
-    "pedestals:chiseled_brimstone_bricks_pedestal"
+    "pedestals:chiseled_brimstone_bricks_pedestal",
+    "pedestals:apricorn_planks_pedestal",
+    "pedestals:apricorn_log_pedestal"
   ]
 }

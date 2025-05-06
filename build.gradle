@@ -116,9 +116,14 @@ configurations {
 
 dependencies {
 
+// Biomes O Plenty
     implementation "curse.maven:glitchcore-955399:5645390"
     implementation "curse.maven:terrablender-neoforge-940057:5658260"
     implementation "curse.maven:biomes-o-plenty-220318:5645384"
+
+    //Cobblemon
+    implementation "curse.maven:kotlin-for-forge-351264:6497906"
+    implementation "curse.maven:cobblemon-687131:6125026"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

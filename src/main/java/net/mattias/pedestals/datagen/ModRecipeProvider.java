@@ -1,8 +1,10 @@
 package net.mattias.pedestals.datagen;
 
 import biomesoplenty.api.block.BOPBlocks;
+import com.cobblemon.mod.common.CobblemonBlocks;
 import net.mattias.pedestals.core.optional.BasePedestalVariants;
 import net.mattias.pedestals.core.optional.BiomeOPlentyVariants;
+import net.mattias.pedestals.core.optional.CobblemonVariants;
 import net.mattias.pedestals.core.registry.ModBlocks;
 import net.mattias.pedestals.core.util.PedestalVariant;
 import net.minecraft.core.HolderLookup;
@@ -185,6 +187,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         MATERIAL_MAP.put(BiomeOPlentyVariants.BRIMSTONE, BOPBlocks.BRIMSTONE);
         MATERIAL_MAP.put(BiomeOPlentyVariants.BRIMSTONE_BRICKS, BOPBlocks.BRIMSTONE_BRICKS);
         MATERIAL_MAP.put(BiomeOPlentyVariants.CHISELED_BRIMSTONE_BRICKS, BOPBlocks.CHISELED_BRIMSTONE_BRICKS);
+
+        //Cobblemon
+        MATERIAL_MAP.put(CobblemonVariants.APRICORN_LOG, CobblemonBlocks.APRICORN_LOG);
+        MATERIAL_MAP.put(CobblemonVariants.APRICORN_PLANKS, CobblemonBlocks.APRICORN_PLANKS);
+
+//        MATERIAL_MAP.put(CobblemonVariants.TUMBLESTONE, CobblemonBlocks.TUMBLESTONE_BLOCK);
+//        MATERIAL_MAP.put(CobblemonVariants.BLACK_TUMBLESTONE, CobblemonBlocks.BLACK_TUMBLESTONE_BLOCK);
+//        MATERIAL_MAP.put(CobblemonVariants.SKY_TUMBLESTONE, CobblemonBlocks.SKY_TUMBLESTONE_BLOCK);
+//        MATERIAL_MAP.put(CobblemonVariants.POLISHED_TUMBLESTONE, CobblemonBlocks.POLISHED_TUMBLESTONE);
+//        MATERIAL_MAP.put(CobblemonVariants.POLISHED_BLACK_TUMBLESTONE, CobblemonBlocks.POLISHED_BLACK_TUMBLESTONE);
+//        MATERIAL_MAP.put(CobblemonVariants.CHISELED_POLISHED_TUMBLESTONE, CobblemonBlocks.CHISELED_POLISHED_TUMBLESTONE);
+//        MATERIAL_MAP.put(CobblemonVariants.TUMBLESTONE_BRICKS, CobblemonBlocks.TUMBLESTONE_BRICKS);
+//        MATERIAL_MAP.put(CobblemonVariants.CHISELED_TUMBLESTONE_BRICKS, CobblemonBlocks.CHISELED_TUMBLESTONE_BRICKS);
+//        MATERIAL_MAP.put(CobblemonVariants.SMOOTH_TUMBLESTONE, CobblemonBlocks.SMOOTH_TUMBLESTONE);
+
+
     }
 
 

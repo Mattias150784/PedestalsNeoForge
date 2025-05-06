@@ -160,5 +160,27 @@
  "block.pedestals.brimstone_bricks_pedestal": "Brimstone Bricks Pedestal",
  "block.pedestals.chiseled_brimstone_bricks_pedestal": "Chiseled Brimstone Bricks Pedestal",
 
-  "itemGroup.pedestals": "Pedestals"
+ "block.pedestals.apricorn_log_pedestal": "Apricorn Log Pedestal",
+ "block.pedestals.apricorn_planks_pedestal": "Apricorn Planks Pedestal",
+ "block.pedestals.tumblestone_pedestal": "Tumblestone Pedestal",
+ "block.pedestals.black_tumblestone_pedestal": "Black Tumblestone Pedestal",
+ "block.pedestals.sky_tumblestone_pedestal": "Sky Tumblestone Pedestal",
+ "block.pedestals.polished_tumblestone_pedestal": "Polished Tumblestone Pedestal",
+ "block.pedestals.polished_black_tumblestone_pedestal": "Polished Black Tumblestone Pedestal",
+ "block.pedestals.chiseled_polished_tumblestone_pedestal": "Chiseled Polished Tumblestone Pedestal",
+ "block.pedestals.tumblestone_bricks_pedestal": "Tumblestone Bricks Pedestal",
+ "block.pedestals.chiseled_tumblestone_bricks_pedestal": "Chiseled Tumblestone Bricks Pedestal",
+ "block.pedestals.smooth_tumblestone_pedestal": "Smooth Tumblestone Pedestal",
+
+
+
+
+
+
+
+
+
+
+
+ "itemGroup.pedestals": "Pedestals"
 }

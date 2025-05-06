@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_apricorn_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cobblemon:apricorn_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "pedestals:apricorn_log_pedestal"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_apricorn_log"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "pedestals:apricorn_log_pedestal"
+    ]
+  }
+}
