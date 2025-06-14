@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polished_black_tumblestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cobblemon:polished_black_tumblestone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "pedestals:polished_black_tumblestone_pedestal"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_polished_black_tumblestone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "pedestals:polished_black_tumblestone_pedestal"
+    ]
+  }
+}

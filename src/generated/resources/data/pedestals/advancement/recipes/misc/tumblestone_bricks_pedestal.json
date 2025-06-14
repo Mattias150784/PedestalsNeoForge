@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "pedestals:tumblestone_bricks_pedestal"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tumblestone_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cobblemon:tumblestone_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tumblestone_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "pedestals:tumblestone_bricks_pedestal"
+    ]
+  }
+}

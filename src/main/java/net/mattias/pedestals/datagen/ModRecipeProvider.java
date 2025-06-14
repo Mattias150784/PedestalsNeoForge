@@ -49,29 +49,34 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         MATERIAL_MAP.put(BasePedestalVariants.SPRUCE_PLANKS, Blocks.SPRUCE_PLANKS);
         MATERIAL_MAP.put(BasePedestalVariants.BAMBOO_PLANKS, Blocks.BAMBOO_PLANKS);
 
-        // Stone variants
+        // Stone materials
         MATERIAL_MAP.put(BasePedestalVariants.STONE, Blocks.STONE);
         MATERIAL_MAP.put(BasePedestalVariants.COBBLESTONE, Blocks.COBBLESTONE);
         MATERIAL_MAP.put(BasePedestalVariants.STONE_BRICKS, Blocks.STONE_BRICKS);
         MATERIAL_MAP.put(BasePedestalVariants.SMOOTH_STONE, Blocks.SMOOTH_STONE);
-
         MATERIAL_MAP.put(BasePedestalVariants.POLISHED_GRANITE, Blocks.POLISHED_GRANITE);
         MATERIAL_MAP.put(BasePedestalVariants.POLISHED_DIORITE, Blocks.POLISHED_DIORITE);
         MATERIAL_MAP.put(BasePedestalVariants.POLISHED_ANDESITE, Blocks.POLISHED_ANDESITE);
         MATERIAL_MAP.put(BasePedestalVariants.GRANITE, Blocks.GRANITE);
+        MATERIAL_MAP.put(BasePedestalVariants.BRICKS, Blocks.BRICKS);
         MATERIAL_MAP.put(BasePedestalVariants.DIORITE, Blocks.DIORITE);
         MATERIAL_MAP.put(BasePedestalVariants.ANDESITE, Blocks.ANDESITE);
-        MATERIAL_MAP.put(BasePedestalVariants.POLISHED_TUFF, Blocks.POLISHED_TUFF);
         MATERIAL_MAP.put(BasePedestalVariants.POLISHED_DEEPSLATE, Blocks.POLISHED_DEEPSLATE);
-        MATERIAL_MAP.put(BasePedestalVariants.BRICKS, Blocks.BRICKS);
+        MATERIAL_MAP.put(BasePedestalVariants.CHISELED_DEEPSLATE, Blocks.CHISELED_DEEPSLATE);
+        MATERIAL_MAP.put(BasePedestalVariants.DEEPSLATE, Blocks.DEEPSLATE);
+        MATERIAL_MAP.put(BasePedestalVariants.DEEPSLATE_TILES, Blocks.DEEPSLATE_TILES);
+        MATERIAL_MAP.put(BasePedestalVariants.DEEPSLATE_BRICKS, Blocks.DEEPSLATE_BRICKS);
+        MATERIAL_MAP.put(BasePedestalVariants.COBBLED_DEEPSLATE, Blocks.COBBLED_DEEPSLATE);
+        MATERIAL_MAP.put(BasePedestalVariants.CRACKED_DEEPSLATE_BRICKS, Blocks.CRACKED_DEEPSLATE_BRICKS);
+        MATERIAL_MAP.put(BasePedestalVariants.CRACKED_DEEPSLATE_TILES, Blocks.CRACKED_DEEPSLATE_TILES);
         MATERIAL_MAP.put(BasePedestalVariants.MOSSY_COBBLESTONE, Blocks.MOSSY_COBBLESTONE);
         MATERIAL_MAP.put(BasePedestalVariants.MOSSY_STONE_BRICKS, Blocks.MOSSY_STONE_BRICKS);
-
-        // Quartz & Sandstone
         MATERIAL_MAP.put(BasePedestalVariants.QUARTZ, Blocks.QUARTZ_BLOCK);
         MATERIAL_MAP.put(BasePedestalVariants.QUARTZ_PILLAR, Blocks.QUARTZ_PILLAR);
         MATERIAL_MAP.put(BasePedestalVariants.RED_SANDSTONE, Blocks.RED_SANDSTONE);
         MATERIAL_MAP.put(BasePedestalVariants.SANDSTONE, Blocks.SANDSTONE);
+        MATERIAL_MAP.put(BasePedestalVariants.CALCITE, Blocks.CALCITE);
+        MATERIAL_MAP.put(BasePedestalVariants.POLISHED_TUFF, Blocks.POLISHED_TUFF);
 
         // Concrete variants
         MATERIAL_MAP.put(BasePedestalVariants.BLACK_CONCRETE, Blocks.BLACK_CONCRETE);
@@ -153,6 +158,42 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         MATERIAL_MAP.put(BasePedestalVariants.END_STONE_BRICKS, Blocks.END_STONE_BRICKS);
         MATERIAL_MAP.put(BasePedestalVariants.END_STONE, Blocks.END_STONE);
         MATERIAL_MAP.put(BasePedestalVariants.PURPUR_BLOCK, Blocks.PURPUR_BLOCK);
+        MATERIAL_MAP.put(BasePedestalVariants.NETHERRACK, Blocks.NETHERRACK);
+        MATERIAL_MAP.put(BasePedestalVariants.SOUL_SAND, Blocks.SOUL_SAND);
+        MATERIAL_MAP.put(BasePedestalVariants.SOUL_SOIL, Blocks.SOUL_SOIL);
+        MATERIAL_MAP.put(BasePedestalVariants.RED_NETHER_BRICKS, Blocks.RED_NETHER_BRICKS);
+
+        // Misc
+        MATERIAL_MAP.put(BasePedestalVariants.GLASS, Blocks.GLASS);
+        MATERIAL_MAP.put(BasePedestalVariants.BLACK_GLASS, Blocks.BLACK_STAINED_GLASS);
+        MATERIAL_MAP.put(BasePedestalVariants.BLUE_GLASS, Blocks.BLUE_STAINED_GLASS);
+        MATERIAL_MAP.put(BasePedestalVariants.BROWN_GLASS, Blocks.BROWN_STAINED_GLASS);
+        MATERIAL_MAP.put(BasePedestalVariants.GREEN_GLASS, Blocks.GREEN_STAINED_GLASS);
+        MATERIAL_MAP.put(BasePedestalVariants.GRAY_GLASS, Blocks.GRAY_STAINED_GLASS);
+        MATERIAL_MAP.put(BasePedestalVariants.ORANGE_GLASS, Blocks.ORANGE_STAINED_GLASS);
+        MATERIAL_MAP.put(BasePedestalVariants.PURPLE_GLASS, Blocks.PURPLE_STAINED_GLASS);
+        MATERIAL_MAP.put(BasePedestalVariants.LIGHT_GRAY_GLASS, Blocks.LIGHT_GRAY_STAINED_GLASS);
+        MATERIAL_MAP.put(BasePedestalVariants.LIGHT_BLUE_GLASS, Blocks.LIGHT_BLUE_STAINED_GLASS);
+        MATERIAL_MAP.put(BasePedestalVariants.PINK_GLASS, Blocks.PINK_STAINED_GLASS);
+        MATERIAL_MAP.put(BasePedestalVariants.RED_GLASS, Blocks.RED_STAINED_GLASS);
+        MATERIAL_MAP.put(BasePedestalVariants.WHITE_GLASS, Blocks.WHITE_STAINED_GLASS);
+        MATERIAL_MAP.put(BasePedestalVariants.YELLOW_GLASS, Blocks.YELLOW_STAINED_GLASS);
+        MATERIAL_MAP.put(BasePedestalVariants.MAGENTA_GLASS, Blocks.MAGENTA_STAINED_GLASS);
+        MATERIAL_MAP.put(BasePedestalVariants.CYAN_GLASS, Blocks.CYAN_STAINED_GLASS);
+        MATERIAL_MAP.put(BasePedestalVariants.LIME_GLASS, Blocks.LIME_STAINED_GLASS);
+        MATERIAL_MAP.put(BasePedestalVariants.PACKED_MUD, Blocks.PACKED_MUD);
+        MATERIAL_MAP.put(BasePedestalVariants.MUD_BRICKS, Blocks.MUD_BRICKS);
+        MATERIAL_MAP.put(BasePedestalVariants.PRISMARINE, Blocks.PRISMARINE);
+        MATERIAL_MAP.put(BasePedestalVariants.PRISMARINE_BRICKS, Blocks.PRISMARINE_BRICKS);
+        MATERIAL_MAP.put(BasePedestalVariants.DARK_PRISMARINE, Blocks.DARK_PRISMARINE);
+        MATERIAL_MAP.put(BasePedestalVariants.AMETHYST, Blocks.AMETHYST_BLOCK);
+        MATERIAL_MAP.put(BasePedestalVariants.SMOOTH_QUARTZ, Blocks.SMOOTH_QUARTZ);
+        MATERIAL_MAP.put(BasePedestalVariants.QUARTZ_BRICKS, Blocks.QUARTZ_BRICKS);
+        MATERIAL_MAP.put(BasePedestalVariants.CHISELED_QUARTZ, Blocks.CHISELED_QUARTZ_BLOCK);
+        MATERIAL_MAP.put(BasePedestalVariants.CRACKED_POLISHED_BLACKSTONE_BRICK, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+        MATERIAL_MAP.put(BasePedestalVariants.CHISELED_POLISHED_BLACKSTONE, Blocks.CHISELED_POLISHED_BLACKSTONE);
+        MATERIAL_MAP.put(BasePedestalVariants.POLISHED_BLACKSTONE, Blocks.POLISHED_BLACKSTONE);
+        MATERIAL_MAP.put(BasePedestalVariants.POLISHED_BLACKSTONE_BRICK, Blocks.POLISHED_BLACKSTONE_BRICKS);
 
 
         // Biomes O Plenty
@@ -191,16 +232,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //Cobblemon
         MATERIAL_MAP.put(CobblemonVariants.APRICORN_LOG, CobblemonBlocks.APRICORN_LOG);
         MATERIAL_MAP.put(CobblemonVariants.APRICORN_PLANKS, CobblemonBlocks.APRICORN_PLANKS);
+        
+        MATERIAL_MAP.put(CobblemonVariants.TUMBLESTONE, CobblemonBlocks.TUMBLESTONE_BLOCK);
+        MATERIAL_MAP.put(CobblemonVariants.POLISHED_TUMBLESTONE, CobblemonBlocks.POLISHED_TUMBLESTONE);
+        MATERIAL_MAP.put(CobblemonVariants.CHISELED_POLISHED_TUMBLESTONE, CobblemonBlocks.CHISELED_POLISHED_TUMBLESTONE);
+        MATERIAL_MAP.put(CobblemonVariants.TUMBLESTONE_BRICKS, CobblemonBlocks.TUMBLESTONE_BRICKS);
+        MATERIAL_MAP.put(CobblemonVariants.CHISELED_TUMBLESTONE_BRICKS, CobblemonBlocks.CHISELED_TUMBLESTONE_BRICKS);
+        MATERIAL_MAP.put(CobblemonVariants.SMOOTH_TUMBLESTONE, CobblemonBlocks.SMOOTH_TUMBLESTONE);
 
-//        MATERIAL_MAP.put(CobblemonVariants.TUMBLESTONE, CobblemonBlocks.TUMBLESTONE_BLOCK);
-//        MATERIAL_MAP.put(CobblemonVariants.BLACK_TUMBLESTONE, CobblemonBlocks.BLACK_TUMBLESTONE_BLOCK);
-//        MATERIAL_MAP.put(CobblemonVariants.SKY_TUMBLESTONE, CobblemonBlocks.SKY_TUMBLESTONE_BLOCK);
-//        MATERIAL_MAP.put(CobblemonVariants.POLISHED_TUMBLESTONE, CobblemonBlocks.POLISHED_TUMBLESTONE);
-//        MATERIAL_MAP.put(CobblemonVariants.POLISHED_BLACK_TUMBLESTONE, CobblemonBlocks.POLISHED_BLACK_TUMBLESTONE);
-//        MATERIAL_MAP.put(CobblemonVariants.CHISELED_POLISHED_TUMBLESTONE, CobblemonBlocks.CHISELED_POLISHED_TUMBLESTONE);
-//        MATERIAL_MAP.put(CobblemonVariants.TUMBLESTONE_BRICKS, CobblemonBlocks.TUMBLESTONE_BRICKS);
-//        MATERIAL_MAP.put(CobblemonVariants.CHISELED_TUMBLESTONE_BRICKS, CobblemonBlocks.CHISELED_TUMBLESTONE_BRICKS);
-//        MATERIAL_MAP.put(CobblemonVariants.SMOOTH_TUMBLESTONE, CobblemonBlocks.SMOOTH_TUMBLESTONE);
+        MATERIAL_MAP.put(CobblemonVariants.BLACK_TUMBLESTONE, CobblemonBlocks.BLACK_TUMBLESTONE_BLOCK);
+        MATERIAL_MAP.put(CobblemonVariants.POLISHED_BLACK_TUMBLESTONE, CobblemonBlocks.POLISHED_BLACK_TUMBLESTONE);
+        MATERIAL_MAP.put(CobblemonVariants.CHISELED_POLISHED_BLACK_TUMBLESTONE, CobblemonBlocks.CHISELED_POLISHED_BLACK_TUMBLESTONE);
+        MATERIAL_MAP.put(CobblemonVariants.BLACK_TUMBLESTONE_BRICKS, CobblemonBlocks.BLACK_TUMBLESTONE_BRICKS);
+        MATERIAL_MAP.put(CobblemonVariants.CHISELED_BLACK_TUMBLESTONE_BRICKS, CobblemonBlocks.CHISELED_BLACK_TUMBLESTONE_BRICKS);
+        MATERIAL_MAP.put(CobblemonVariants.SMOOTH_BLACK_TUMBLESTONE, CobblemonBlocks.SMOOTH_BLACK_TUMBLESTONE);
+
+        MATERIAL_MAP.put(CobblemonVariants.SKY_TUMBLESTONE, CobblemonBlocks.SKY_TUMBLESTONE_BLOCK);
+        MATERIAL_MAP.put(CobblemonVariants.POLISHED_SKY_TUMBLESTONE, CobblemonBlocks.POLISHED_SKY_TUMBLESTONE);
+        MATERIAL_MAP.put(CobblemonVariants.CHISELED_POLISHED_SKY_TUMBLESTONE, CobblemonBlocks.CHISELED_POLISHED_SKY_TUMBLESTONE);
+        MATERIAL_MAP.put(CobblemonVariants.SKY_TUMBLESTONE_BRICKS, CobblemonBlocks.SKY_TUMBLESTONE_BRICKS);
+        MATERIAL_MAP.put(CobblemonVariants.CHISELED_SKY_TUMBLESTONE_BRICKS, CobblemonBlocks.CHISELED_SKY_TUMBLESTONE_BRICKS);
+        MATERIAL_MAP.put(CobblemonVariants.SMOOTH_SKY_TUMBLESTONE, CobblemonBlocks.SMOOTH_SKY_TUMBLESTONE);
+
 
 
     }

@@ -3,8 +3,16 @@ package net.mattias.pedestals.client.renderer.blockentity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 
+import net.mattias.pedestals.Pedestals;
 import net.mattias.pedestals.core.world.block.entity.PedestalBlockEntity;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.model.geom.ModelLayerLocation;
+import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.model.geom.PartPose;
+import net.minecraft.client.model.geom.builders.CubeListBuilder;
+import net.minecraft.client.model.geom.builders.LayerDefinition;
+import net.minecraft.client.model.geom.builders.MeshDefinition;
+import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
@@ -18,8 +26,20 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LightLayer;
 
 public class PedestalRenderer implements BlockEntityRenderer<PedestalBlockEntity> {
-    public PedestalRenderer(BlockEntityRendererProvider.Context context) {
 
+    public static final ModelLayerLocation PEDESTAL_LAYER = new ModelLayerLocation(Pedestals.identifier("pedestal_layer"), "main");
+    private final ModelPart pedestalModel;
+
+    public PedestalRenderer(BlockEntityRendererProvider.Context context) {
+        pedestalModel = context.bakeLayer(PEDESTAL_LAYER);
+    }
+
+    public static LayerDefinition createBodyLayer() {
+        MeshDefinition mesh = new MeshDefinition();
+        PartDefinition root = mesh.getRoot();
+        PartDefinition base = root.addOrReplaceChild("base", CubeListBuilder.create().texOffs(0, 0).addBox(2, 0, 2, 12, 14, 12), PartPose.ZERO);
+        PartDefinition top = root.addOrReplaceChild("top", CubeListBuilder.create().texOffs(0, 0).addBox(1, 14, 1, 14, 2, 14), PartPose.ZERO);
+        return LayerDefinition.create(mesh, 16, 16);
     }
 
     @Override

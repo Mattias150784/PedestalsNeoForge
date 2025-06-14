@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polished_sky_tumblestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cobblemon:polished_sky_tumblestone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "pedestals:polished_sky_tumblestone_pedestal"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_polished_sky_tumblestone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "pedestals:polished_sky_tumblestone_pedestal"
+    ]
+  }
+}
